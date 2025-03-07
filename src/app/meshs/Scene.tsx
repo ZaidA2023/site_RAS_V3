@@ -2,17 +2,24 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei/core'
-
+import * as THREE from 'three';
 // Import the Model component dynamically to avoid SSR issues
 const Model = dynamic(() => import('./Model'), { ssr: false })
 
 export default function umidk() {
   return (
-    <Canvas camera={{ fov: 75, position: [0, 0, 1.5]}}>
-
+    <Canvas
+    camera={{
+      fov: 75,
+      position: [0, 0, 1.5],  // Initial camera position [x, y, z]
+      near: 0.1,
+      far: 1000
+    }}
+    >
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 5]} />
       <OrbitControls 
+        target = {[0,-0.25,0]}
         enableZoom = {false}
         />
       <Model />
