@@ -58,7 +58,7 @@ export default function Home() {
         <Navbar />
       <div className="relative">
         <div className="relative w-full">
-          <img id = "main"
+          <img id = "home"
             className="w-[100%] flex m-auto z-5" 
             src="/vex.jpeg" 
             alt="Background"
@@ -72,6 +72,10 @@ export default function Home() {
         >
           UT IEEE <br/>RAS
         </p>
+        
+
+
+
         <div
           className="text-7xl relative text-black text-center top-20 h-[300vh]"
         >

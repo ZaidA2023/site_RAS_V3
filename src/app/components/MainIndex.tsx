@@ -22,7 +22,7 @@ const Navbar = () => {
       } else {
         setScrolled(false)
       }
-      let newOpacity = (scrollY - startFade) / (endFade - startFade);
+      let newOpacity = 1 - (scrollY - startFade) / (endFade - startFade);
       newOpacity = Math.min(Math.max(newOpacity, 0), 1); 
       setOpacity(newOpacity);
     };
@@ -41,12 +41,12 @@ const Navbar = () => {
 
       {/* Navbar content */}
       <div className="relative flex items-center h-20 w-screen">
-        <a href = "#home"><img 
+        <img 
           src="/ras_logo.png"
           alt="Logo"
           className="pl-12"
           style={{ width: 120 }}
-        /></a>
+        />
         <div className="w-full mx-auto flex justify-end gap-10 pr-8">
           {sections.map((section) => (
             <a
