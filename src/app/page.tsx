@@ -56,7 +56,6 @@ export default function Home() {
   return (
     <div className="relative">
         <Navbar />
-      <div className="relative">
         <div className="relative w-full">
           <img id = "home"
             className="w-[100%] flex m-auto z-5" 
@@ -65,15 +64,18 @@ export default function Home() {
           />
           <div className= "absolute inset-0 bg-[linear-gradient(90deg,black_0%,black_5%,transparent_35%,transparent_100%)]"
           ></div>
+           <p className = "text-2xl flex left-40 top-110 absolute">MAKING ROBOTICS ACCESSIBLE</p>
+           <p className = "text-4xl flex left-35 top-120 absolute">
+            Teaching practical robotics skills to<br/> all as the largest engineering group<br/>at UT
+             with over 200 students across <br/>7 majors 
+          </p>
+          <p
+            className="fixed flex top-30 left-30 text-center text-[#e7ebec] text-9xl font-extrabold"
+            style={{ opacity: opacity }}
+          >
+            UT IEEE <br/>RAS
+          </p>
         </div>
-        <p
-          className="fixed flex top-30 left-20 text-9xl font-extrabold text-center text-[#e7ebec]"
-          style={{ opacity: opacity }}
-        >
-          UT IEEE <br/>RAS
-        </p>
-        
-
 
 
         <div
@@ -93,7 +95,6 @@ export default function Home() {
       <div>
         <Scene4/>
       </div> */}
-      </div>
     </div>
   );
 }
