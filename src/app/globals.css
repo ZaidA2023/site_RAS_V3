@@ -17,7 +17,7 @@
   }
 }
 
-
+/* New font, change if needed */
 @font-face {
   font-family: 'suisse';
   src: url('/suisse.ttf') format('truetype');

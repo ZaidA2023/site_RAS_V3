@@ -3,21 +3,23 @@
 import React, { useState, useEffect } from 'react';
 
 const Navbar = () => {
+   {/* Sections at top right */}
   const sections = [
     { id: 'about', label: 'About' },
-    { id: 'services', label: 'Services' },
+    { id: 'groups', label: 'Commitees' },
     { id: 'contact', label: 'Contact' },
   ];
 
   const [opacity, setOpacity] = useState(0);
   const [scrolled, setScrolled] = useState(false);
 
+   {/* Fade effect, not really needed anymore */}
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       const startFade = 200; 
       const endFade = 500; 
-      if(scrollY > 500) {
+      if(scrollY > 600) {
         setScrolled(true);
       } else {
         setScrolled(false)
@@ -42,12 +44,12 @@ const Navbar = () => {
       {/* Navbar content */}
       <div className="relative flex items-center h-20 w-screen">
         <a href = "#home"><img 
-          src="/ras_logo.png"
+          src={`${scrolled ?  "/ras_logo_dark.png" : "/ras_logo.png"}`}
           alt="Logo"
           className="pl-12"
           style={{ width: 120 }}
         /></a>
-        <div className="w-full mx-auto flex justify-end gap-10 pr-8">
+        <div className="w-full mx-auto flex justify-end gap-8 pr-8">
           {sections.map((section) => (
             <a
               key={section.id}

@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+//Top of site info, like bar
 export const metadata: Metadata = {
   title: "UT IEEE RAS",
   description: "by Zaid Albustami",
