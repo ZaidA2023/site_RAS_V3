@@ -11,7 +11,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 bg-gradient-to-r from-grey-100 to-orange-600 shadow-xl h-20 flex items-center z-50">
+    <nav className="sticky top-0 bg-[linear-gradient(90deg,black_0%,black_20%,#7c2d12_80%,#7c2d12_100%)]
+    shadow-xl h-20 flex items-center z-50">
+        <img 
+          src = "/ras_logo.png"
+          className = "pl-12"
+          style = {{width: 120}}
+        />
       <div className="container mx-auto flex justify-end gap-10">
         {sections.map((section) => (
           <a
