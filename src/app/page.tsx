@@ -54,14 +54,14 @@ export default function Home() {
 
   return (
     <div className="relative">
-      <div className="relative">
         <Navbar />
+      <div className="relative">
         <img 
-          className="w-[100%] flex m-auto" 
+          className="w-[100%] flex m-auto z-5" 
           src="/vex.jpeg" 
           alt="Background"
         />
-        <div className="absolute inset-0
+        <div className="absolute inset-0 z-0 h-screen
            bg-[linear-gradient(90deg,black_0%,black_5%,transparent_35%,transparent_100%)]"
         ></div>
         <p
@@ -71,7 +71,12 @@ export default function Home() {
         >
           UT IEEE <br/>RAS
         </p>
-      <div id="3d_meshs" className="flex float-right w-full h-[50vh]">
+        <div
+          className="text-6xl relative text-black font-bold text-center top-20 h-[300vh]"
+        >
+          What is RAS?
+        </div>
+      {/* <div id="3d_meshs" className="flex float-right w-full h-[50vh]">
         <Scene/>
       </div>
       <div>
@@ -82,7 +87,7 @@ export default function Home() {
       </div>
       <div>
         <Scene4/>
-      </div>
+      </div> */}
       </div>
     </div>
   );

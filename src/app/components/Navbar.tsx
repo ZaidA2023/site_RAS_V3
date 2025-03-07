@@ -11,12 +11,18 @@ const Navbar = () => {
   ];
 
   const [opacity, setOpacity] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
       const startFade = 200; 
       const endFade = 500; 
-      
+      if(scrollY > 500) {
+        setScrolled(true);
+      } else {
+        setScrolled(false)
+      }
       let newOpacity = (scrollY - startFade) / (endFade - startFade);
       newOpacity = Math.min(Math.max(newOpacity, 0), 1); 
       setOpacity(newOpacity);
@@ -31,7 +37,7 @@ const Navbar = () => {
       {/* Background overlay*/}
       <div
         className="absolute inset-0 h-20 transition-opacity duration-1000 
-        bg-[linear-gradient(90deg,black_0%,black_20%,#7c2d12_80%,#7c2d12_100%)]"
+        bg-[linear-gradient(-90deg,white_0%,white_20%,#7c2d12_80%,#7c2d12_100%)]"
           style={{opacity: opacity}}
       ></div>
 
@@ -48,12 +54,9 @@ const Navbar = () => {
             <a
               key={section.id}
               href={`#${section.id}`}
-              className="px-4 py-2 border border-black rounded-full 
-                         text-black
-                         font-bold
-                         bg-white/80
-                         hover:bg-white hover:text-black 
-                         transition duration-300"
+              className={`px-4 py-2 border border-black rounded-full text-black font-bold hover:bg-[#7c2d12] 
+                    hover:text-white transition duration-300 
+                    ${scrolled ? 'bg-transparent text-black border-transparent' : 'bg-white/80'}`}
             >
               {section.label}
             </a>
