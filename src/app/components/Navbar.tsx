@@ -14,22 +14,21 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      const startFade = 200; // Start fading after 100px scroll
-      const endFade = 500;   // Fully faded out at 500px scroll
+      const startFade = 200; 
+      const endFade = 500; 
       
       let newOpacity = (scrollY - startFade) / (endFade - startFade);
-      newOpacity = Math.min(Math.max(newOpacity, 0), 1); // Clamp between 0 and 1
+      newOpacity = Math.min(Math.max(newOpacity, 0), 1); 
       setOpacity(newOpacity);
     };
 
     window.addEventListener('scroll', handleScroll);
-    // Clean up the event listener on unmount
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <nav className="fixed top-0 z-50">
-      {/* Background overlay with linear gradient */}
+      {/* Background overlay*/}
       <div
         className="absolute inset-0 h-20 transition-opacity duration-1000 
         bg-[linear-gradient(90deg,black_0%,black_20%,#7c2d12_80%,#7c2d12_100%)]"

@@ -40,12 +40,11 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || document.documentElement.scrollTop;
-      // Adjust these values to control when fading starts/ends
       const startFade = 100; // Start fading after 100px scroll
       const endFade = 500;   // Fully faded out at 500px scroll
       
       let newOpacity = 1 - (scrollY - startFade) / (endFade - startFade);
-      newOpacity = Math.min(Math.max(newOpacity, 0), 1); // Clamp between 0 and 1
+      newOpacity = Math.min(Math.max(newOpacity, 0), 1); 
       setOpacity(newOpacity);
     };
 
@@ -65,7 +64,6 @@ export default function Home() {
         <div className="absolute inset-0
            bg-[linear-gradient(90deg,black_0%,black_5%,transparent_35%,transparent_100%)]"
         ></div>
-        {/* Changed positioning to fixed so the text stays in place */}
         <p
           className="fixed flex top-30 left-20 text-9xl font-extrabold text-center text-[#e7ebec] 
                         drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]"
