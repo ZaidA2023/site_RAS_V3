@@ -1,12 +1,8 @@
 "use client"
 
-import Image from "next/image";
-import Navbar from "./Navbar";
-import React from 'react';
+import Navbar from "./components/Navbar";
+import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
-import { Canvas } from '@react-three/fiber';
-import umidk from './meshs/Scene';
-
 
 // Dynamically import with SSR disabled
 const Scene = dynamic(
@@ -39,27 +35,57 @@ const Scene4 = dynamic(
 );
 
 export default function Home() {
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      // Adjust these values to control when fading starts/ends
+      const startFade = 100; // Start fading after 100px scroll
+      const endFade = 500;   // Fully faded out at 500px scroll
+      
+      let newOpacity = 1 - (scrollY - startFade) / (endFade - startFade);
+      newOpacity = Math.min(Math.max(newOpacity, 0), 1); // Clamp between 0 and 1
+      setOpacity(newOpacity);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="absolute"> {/* Absolute for sticky Nav */}
-      <Navbar />
-      <div className="relative"> {/* Home area div */}
+    <div className="relative">
+      <div className="relative">
+        <Navbar />
         <img 
-          className="w-[95%] flex m-auto" 
-          src="/vex.png" 
+          className="w-[100%] flex m-auto" 
+          src="/vex.jpeg" 
           alt="Background"
         />
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        <div className="absolute inset-0
+           bg-[linear-gradient(90deg,black_0%,black_5%,transparent_35%,transparent_100%)]"
+        ></div>
+        {/* Changed positioning to fixed so the text stays in place */}
         <p
-          className="absolute inset-0 flex top-50 justify-center text-8xl font-extrabold text-center text-[#e7ebec] drop-shadow-lg"
+          className="fixed flex top-30 left-20 text-9xl font-extrabold text-center text-[#e7ebec] 
+                        drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]"
+          style={{ opacity: opacity }}
         >
-          WELCOME <br /> TO <br /> UT IEEE RAS
+          UT IEEE <br/>RAS
         </p>
+      <div id="3d_meshs" className="flex float-right w-full h-[50vh]">
+        <Scene/>
       </div>
-      <div id="3d_meshs" className = "flex float-right w-full h-[50vh]" > {/* some models ig */}
-        <Scene/><Scene2/><Scene4/> <Scene3/>
+      <div>
+        <Scene2/>
       </div>
-
+      <div>
+        <Scene3/>
+      </div>
+      <div>
+        <Scene4/>
+      </div>
+      </div>
     </div>
   );
 }
