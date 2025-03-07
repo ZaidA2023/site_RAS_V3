@@ -4,7 +4,8 @@ import Navbar from "./components/Navbar";
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 
-// Dynamically import with SSR disabled
+// Dynamically import with SSR disabled,
+// Can enable later for speed? :D
 const Scene = dynamic(
   () => import('./meshs/Scene'),
   { 
@@ -44,7 +45,7 @@ export default function Home() {
       const endFade = 500;   // Fully faded out at 500px scroll
       
       let newOpacity = 1 - (scrollY - startFade) / (endFade - startFade);
-      newOpacity = Math.min(Math.max(newOpacity, 0), 1); 
+      newOpacity = Math.min(Math.max(newOpacity, 0), 1);
       setOpacity(newOpacity);
     };
 
@@ -56,23 +57,23 @@ export default function Home() {
     <div className="relative">
         <Navbar />
       <div className="relative">
-        <img 
-          className="w-[100%] flex m-auto z-5" 
-          src="/vex.jpeg" 
-          alt="Background"
-        />
-        <div className="absolute inset-0 z-0 h-screen
-           bg-[linear-gradient(90deg,black_0%,black_5%,transparent_35%,transparent_100%)]"
-        ></div>
+        <div className="relative w-full">
+          <img id = "main"
+            className="w-[100%] flex m-auto z-5" 
+            src="/vex.jpeg" 
+            alt="Background"
+          />
+          <div className= "absolute inset-0 bg-[linear-gradient(90deg,black_0%,black_5%,transparent_35%,transparent_100%)]"
+          ></div>
+        </div>
         <p
-          className="fixed flex top-30 left-20 text-9xl font-extrabold text-center text-[#e7ebec] 
-                        drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]"
+          className="fixed flex top-30 left-20 text-9xl font-extrabold text-center text-[#e7ebec]"
           style={{ opacity: opacity }}
         >
           UT IEEE <br/>RAS
         </p>
         <div
-          className="text-6xl relative text-black font-bold text-center top-20 h-[300vh]"
+          className="text-7xl relative text-black text-center top-20 h-[300vh]"
         >
           What is RAS?
         </div>
