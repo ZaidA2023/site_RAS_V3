@@ -44,7 +44,7 @@ const Navbar = () => {
       {/* Navbar content */}
       <div className="relative flex items-center h-20 w-screen">
         <a href = "#home"><img 
-          src={`${scrolled ?  "/ras_logo_dark.png" : "/ras_logo.png"}`}
+          src={`${scrolled ?  "/images/ras_logo_dark.png" : "/images/ras_logo.png"}`}
           alt="Logo"
           className="pl-12"
           style={{ width: 120 }}

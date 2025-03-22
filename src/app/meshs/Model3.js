@@ -3,6 +3,6 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model() {
   // Loads the glTF model from the public folder
-  const { scene } = useGLTF('/duck.glb')
+  const { scene } = useGLTF('/3d/duck.glb')
   return <primitive object={scene} dispose={null} />
 }

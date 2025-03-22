@@ -4,8 +4,8 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader'
 
 export default function Model() {
-  const materials = useLoader(MTLLoader, '/flaps.mtl')
-  const obj = useLoader(OBJLoader, '/flaps.obj', (loader) => {
+  const materials = useLoader(MTLLoader, '/3d/flaps.mtl')
+  const obj = useLoader(OBJLoader, '/3d/flaps.obj', (loader) => {
     loader.setMaterials(materials)
   })
 
