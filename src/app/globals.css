@@ -60,20 +60,6 @@ html {
   border-radius: 4px;
 }
 
-.splide__list {
-  display: flex;
-  animation: scroll 50s linear infinite; /* Adjust time for speed */
-}
-
-@keyframes scroll {  /* The autoscroll demons got to me, easy fix, remove this and .splide_list!!!*/
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
 .splide_track {
   width: 100%;
 }
