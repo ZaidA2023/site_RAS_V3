@@ -90,7 +90,7 @@ export default function Home() {
 
   return (
     <div className="relative">
-      <Navbar scrollSet={false} opacitySet={0}/>
+      <Navbar scrollSet={true} opacitySet={true}/>
       {/* Background image */}
       <div className="relative w-full">
         <img
