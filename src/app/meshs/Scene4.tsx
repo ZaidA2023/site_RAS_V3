@@ -2,7 +2,6 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei/core'
-import * as THREE from 'three';
 
 // Import the Model component dynamically to avoid SSR issues
 const Model = dynamic(() => import('./Model4'), { ssr: false })

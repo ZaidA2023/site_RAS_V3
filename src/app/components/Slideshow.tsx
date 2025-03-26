@@ -6,10 +6,14 @@ const Slideshow = () => {
     { id: 1, img: '/images/vex.jpeg' },
     { id: 2, img: '/images/Ray.jpg' },
     { id: 3, img: '/images/flaps.png' },
-    { id: 4, img: '/images/Mootaz.jpg' },
-    { id: 5, img: '/images/chat.jpeg' },
+    { id: 4, img: '/images/whatisthis.jpg' },
+    { id: 5, img: '/images/chessBot.jpg' },
   ];
 
+  const links = [
+    " ",
+    " "
+  ]
   
   return (
     <div className="wrapper w-full bg-transparent relative">

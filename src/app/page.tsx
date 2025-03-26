@@ -7,39 +7,46 @@ import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Slideshow from './components/Slideshow';
 
-
 //console.log(fetchData());
 // Dynamically import with SSR disabled,
-const Scene = dynamic(
-  () => import('./meshs/Scene'),
-  { 
-    ssr: false,
-    loading: () => <div className="fixed inset-0 z-10 bg-gray-900" />
-  }
-);
-const Scene2 = dynamic(
-  () => import('./meshs/Scene2'),
-  { 
-    ssr: false,
-    loading: () => <div className="fixed inset-0 z-10 bg-gray-900" />
-  }
-);
-const Scene3 = dynamic(
-  () => import('./meshs/Scene3'),
-  { 
-    ssr: false,
-    loading: () => <div className="fixed inset-0 z-10 bg-gray-900" />
-  }
-);
-const Scene4 = dynamic(
-  () => import('./meshs/Scene4'),
-  { 
-    ssr: false,
-    loading: () => <div className="fixed inset-0 z-10 bg-gray-900" />
-  }
-);
+// const Scene = dynamic(
+//   () => import('./meshs/Scene'),
+//   { 
+//     ssr: false,
+//     loading: () => <div className="fixed inset-0 z-10 bg-gray-900" />
+//   }
+// );
+// const Scene2 = dynamic(
+//   () => import('./meshs/Scene2'),
+//   { 
+//     ssr: false,
+//     loading: () => <div className="fixed inset-0 z-10 bg-gray-900" />
+//   }
+// );
+// const Scene3 = dynamic(
+//   () => import('./meshs/Scene3'),
+//   { 
+//     ssr: false,
+//     loading: () => <div className="fixed inset-0 z-10 bg-gray-900" />
+//   }
+// );
+// const Scene4 = dynamic(
+//   () => import('./meshs/Scene4'),
+//   { 
+//     ssr: false,
+//     loading: () => <div className="fixed inset-0 z-10 bg-gray-900" />
+//   }
+// );
 
 export default function Home() {
+
+  //Dynamic front page size
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  }, []);
   const [opacity, setOpacity] = useState(1);
 
   // Effect for fading text based on scroll position
@@ -89,7 +96,8 @@ export default function Home() {
       <div className="relative w-full">
         <img
           id="home"
-          className="w-[100%] flex m-auto z-5 h-[100%]" 
+          className='flex m-auto z-5'
+          style = {{width: width, height: height}}
           src="/images/vex.jpeg" 
           alt="Background"
         />
@@ -120,9 +128,9 @@ export default function Home() {
           What <br /> is <br /> RAS?
         </div>
         <div id="wide" className="flex text-2xl justify-center text-black mt-45 relative">
-          There's the moon asking to stay <br />
+          There&apos;s the moon asking to stay <br />
           Long enough for the clouds to fly me away <br />
-          Oh, it's my time coming, l'm not afraid <br />
+          Oh, it&apos;s my time coming, l&apos;m not afraid <br />
           Afraid to die <br />
           My fading voice sings of love <br />
           - Jeff Buckley :)
@@ -131,7 +139,7 @@ export default function Home() {
 
       {/* Maybe another text box or smthn here before robots? */}
       <div className = "mt-25 text-black text-center text-5xl">
-        HIII!!! BOBOT!!!
+        Our Projects
       </div>
       <div className = "wrapper w-full bg-transparent relative mt-5">
         <Slideshow/>

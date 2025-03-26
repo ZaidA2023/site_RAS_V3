@@ -6,7 +6,7 @@ const Navbar = () => {
    {/* Sections at top right */}
   const sections = [
     { id: 'about', label: 'About' },
-    { id: 'groups', label: 'Commitees' },
+    { id: 'commitees', label: 'Commitees' },
     { id: 'contact', label: 'Contact' },
   ];
 
@@ -53,7 +53,7 @@ const Navbar = () => {
           {sections.map((section) => (
             <a
               key={section.id}
-              href={`#${section.id}`}
+              href={`/${section.id}`}
               className={`px-4 py-2 border border-black rounded-full text-black font-bold hover:bg-[#BF5700] 
                     hover:text-white transition duration-300 
                     ${scrolled ? 'bg-transparent text-black border-transparent' : 'visibility: hidden'}`}
