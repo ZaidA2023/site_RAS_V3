@@ -6,7 +6,7 @@ const Navbar = ({scrollSet, opacitySet}) => {
    {/* Sections at top right */}
   const sections = [
     { id: 'about', label: 'About' },
-    { id: 'commitees', label: 'Commitees' },
+    { id: 'committees', label: 'Committees' },
     { id: 'contact', label: 'Contact' },
   ];
 

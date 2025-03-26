@@ -3,7 +3,7 @@
 import Navbar from "../components/Navbar";
 import React, { useEffect, useState } from 'react';
 
-export default function Commitees() {
+export default function Committees() {
   return (
   <div>
     <div><Navbar scrollSet={true} opacitySet={100}/></div>
