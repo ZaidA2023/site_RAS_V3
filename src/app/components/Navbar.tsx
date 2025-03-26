@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-const Navbar = () => {
+const Navbar = ({scrollSet, opacitySet}) => {
    {/* Sections at top right */}
   const sections = [
     { id: 'about', label: 'About' },
@@ -10,8 +10,8 @@ const Navbar = () => {
     { id: 'contact', label: 'Contact' },
   ];
 
-  const [opacity, setOpacity] = useState(0);
-  const [scrolled, setScrolled] = useState(false);
+  const [opacity, setOpacity] = useState(opacitySet);
+  const [scrolled, setScrolled] = useState(scrollSet);
 
    {/* Fade effect, not really needed anymore */}
   useEffect(() => {
@@ -43,7 +43,7 @@ const Navbar = () => {
 
       {/* Navbar content */}
       <div className="relative flex items-center h-20 w-screen">
-        <a href = "#home"><img 
+        <a href = "/#home"><img 
           src={`${scrolled ?  "/images/ras_logo_dark.png" : "/images/ras_logo.png"}`}
           alt="Logo"
           className="pl-12"

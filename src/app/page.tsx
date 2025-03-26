@@ -39,7 +39,6 @@ import Slideshow from './components/Slideshow';
 // );
 
 export default function Home() {
-
   //Dynamic front page size
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
@@ -91,7 +90,7 @@ export default function Home() {
 
   return (
     <div className="relative">
-      <Navbar />
+      <Navbar scrollSet={false} opacitySet={0}/>
       {/* Background image */}
       <div className="relative w-full">
         <img
