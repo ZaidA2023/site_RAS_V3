@@ -89,7 +89,7 @@ export default function Home() {
       <div className="relative w-full">
         <img
           id="home"
-          className="w-[100%] flex m-auto z-5" 
+          className="w-[100%] flex m-auto z-5 h-[100%]" 
           src="/images/vex.jpeg" 
           alt="Background"
         />
