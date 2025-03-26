@@ -16,7 +16,7 @@ const Slideshow = () => {
   ]
   
   return (
-    <div className="wrapper w-full bg-transparent relative">
+    <div className="wrapper w-full bg-transparent relative mb-30">
       <Splide
         options={{
           type: 'loop',
@@ -24,7 +24,10 @@ const Slideshow = () => {
           pagination: false,
           perPage: 4,
           perMove: 1,
-          speed: 400
+          speed: 400,
+          smoothScroll: true,
+          snap: false,
+          drag: 'free',
         }}
       >
         {slides.map((slide) => (
