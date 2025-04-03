@@ -8,13 +8,6 @@ import dynamic from 'next/dynamic';
 import Slideshow from './components/Slideshow';
 import {slides, Redir} from './components/slides';
 
-const vexSlides = [
-  { id: 1, img: '/images/vex.jpeg' },
-  { id: 2, img: '/images/Ray.jpg' },
-  { id: 3, img: '/images/flaps.png' },
-  { id: 4, img: '/images/whatisthis.jpg' },
-  { id: 5, img: '/images/chessBot.jpg' },
-];
 
 //console.log(fetchData());
 // Dynamically import with SSR disabled,
@@ -106,7 +99,7 @@ export default function Home() {
           id="home"
           className='flex m-auto z-5'
           style = {{width: width, height: height}}
-          src="/images/vex.jpeg" 
+          src="/images/vex/vex.jpeg" 
           alt="Background"
         />
         {/* Home Gradient */}
@@ -143,10 +136,20 @@ export default function Home() {
         </div>
       </div>
 
+      <div className = "w-full flex justify-center">
+        <a href = "/committees" id = "committees" className = {`inline-flex mt-25 text-6xl hover:cursor-pointer
+          px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]`}>
+          Committees
+        </a>
+      </div>
+      <div className = "text-black text-center text-2xl mt-5 mb-20"> 
+        All of our committees are happy to accept new members! <br/>
+      </div>
+
       {/* Awards and total club photo :) */}
       <div className = "flex mt-15">
         <img
-          src = "/images/rmteamlead.jpg"
+          src = "/images/rbm/rmteamlead.jpg"
           className='flex ml-15 mr-auto z-5 mt-10'
           style = {{width: width/2}}
         />
@@ -170,13 +173,6 @@ export default function Home() {
       </div>
 
       {/* Maybe another text box or smthn here before robots? */}
-      <div id = "committees" className = "mt-25 text-black text-center text-6xl">
-        Committees
-      </div>
-      <div className = "text-black text-center text-2xl mt-5 mb-20"> 
-        All of our committees are happy to accept new members! <br/>
-      </div>
-      
 
       {/* 3d render experiments */}
       {/* 

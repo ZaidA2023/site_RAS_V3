@@ -59,6 +59,7 @@ html {
   /*aspect-ratio: 4/4;*/
   height: 300px;
   border-radius: 4px;
+  /*filter: brightness(70%)*/
 }
 
 .splide__list {
