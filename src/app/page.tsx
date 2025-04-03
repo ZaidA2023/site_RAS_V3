@@ -6,6 +6,15 @@ import Navbar from "./components/Navbar";
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Slideshow from './components/Slideshow';
+import {slides, Redir} from './components/slides';
+
+const vexSlides = [
+  { id: 1, img: '/images/vex.jpeg' },
+  { id: 2, img: '/images/Ray.jpg' },
+  { id: 3, img: '/images/flaps.png' },
+  { id: 4, img: '/images/whatisthis.jpg' },
+  { id: 5, img: '/images/chessBot.jpg' },
+];
 
 //console.log(fetchData());
 // Dynamically import with SSR disabled,
@@ -126,34 +135,49 @@ export default function Home() {
         <div id="narrow" className="text-7xl text-center relative text-black flex-col left-15 mt-40">
           What <br /> is <br /> RAS?
         </div>
-        <div id="wide" className="flex text-2xl justify-center text-black mt-45 relative">
-          There&apos;s the moon asking to stay <br />
-          Long enough for the clouds to fly me away <br />
-          Oh, it&apos;s my time coming, l&apos;m not afraid <br />
-          Afraid to die <br />
-          My fading voice sings of love <br />
-          - Jeff Buckley :)
+        <div id="wide" className="flex text-3xl justify-center text-black mt-45 relative leading-12">
+          We are a student organization open to students from any background and major.<br/>
+          Since 1997, we've helped students gain practical multi-disciplinary experience <br/>
+          in the lab, then demonstrated our abilities at various robotics competitions while<br/> 
+          promoting robotics via community outreach.
         </div>
       </div>
 
+      {/* Awards and total club photo :) */}
+      <div className = "flex mt-15">
+        <img
+          src = "/images/rmteamlead.jpg"
+          className='flex ml-15 mr-auto z-5 mt-10'
+          style = {{width: width/2}}
+        />
+        <div className = "width-[50%] ml-5">
+          <div className="text-6xl relative text-center text-black mt-5">
+            Recent Awards
+          </div>
+          <div className = "text-black text-3xl mt-10 m-auto">
+            <div className = 'font-bold'>2024</div>
+            VEX AI Robotics Competition World Champion (Excellence Award)<br/>
+            <div className = 'font-bold'>2023</div> VEXU World Championship Build Award<br/>
+            <div className = 'font-bold'>2022</div> RoboMaster - First Prize - 4th in 2022 North American RoboMaster Competition<br/>
+            {/* 2013<br/> IGVC - 15th place in AutoNav Challenge - DoloRAS<br/>
+            2007<br/> IGVC JAUS Level 1 Award; BlastyRAS, IEEE Region 5 - 5th Best Run - Whiny 1.1, FIRST - Rookie All-Star Award, Nationals Qualification - TinMan<br/>
+            2006:<br/>IGVC - Highest Rookie Score - RASlow, IEEE Region 5 - Final Qualification, 4th Highest Score - Whiny, DPRG - Outdoor Long Haul, 2nd Place - RASlow, BEST - BEST Mentor Award<br/>
+            2005<br/> DPRG - RoboRama, 2nd Place<br/>
+            2004<br/> IEEE Region 5 - Finals Qualification - Kim Smith<br/> */}
+          </div>
+        </div>
+
+      </div>
+
       {/* Maybe another text box or smthn here before robots? */}
-      <div className = "mt-25 text-black text-center text-5xl">
-        Our Projects
+      <div id = "committees" className = "mt-25 text-black text-center text-6xl">
+        Committees
       </div>
-      <div className = "wrapper w-full bg-transparent relative mt-5">
-        <Slideshow/>
+      <div className = "text-black text-center text-2xl mt-5 mb-20"> 
+        All of our committees are happy to accept new members! <br/>
       </div>
-
-
-      {/* Iframe, pointer events toggled on scroll */}
-      {/* <iframe
-        id="iframeElement"
-        src="https://v2-embednotion.com/3d70d577106546ca8411e176fd82248e" 
-        style={{ width: "100%", height: "100vh", overflow: "auto" }}
-        className="mt-20"
-      >
-      </iframe> */}
       
+
       {/* 3d render experiments */}
       {/* 
       <div id="3d_meshs" className="flex float-right w-full h-[50vh]">

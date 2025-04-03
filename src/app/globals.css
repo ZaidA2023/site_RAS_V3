@@ -45,7 +45,7 @@ html {
   display: flex;
 }
 #narrow {
-  padding-right: 20%;
+  padding-right: 15%;
 }
 #wide {
   flex: 1;
@@ -56,10 +56,21 @@ html {
 }
 
 .slide-img {
-  aspect-ratio: 4/4;
+  /*aspect-ratio: 4/4;*/
+  height: 300px;
   border-radius: 4px;
 }
 
-.splide_track {
-  width: 100%;
+.splide__list {
+  max-width: 80%;
+}
+
+.slider-container {
+  margin-left: 5%;  
+  margin-right: 5%;  
+  overflow: hidden; 
+}
+
+.splide__track {
+  max-width: 100%;   /* Ensure the track respects the container’s width */
 }
