@@ -7,6 +7,8 @@ import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Slideshow from './components/Slideshow';
 import {slides, Redir} from './components/slides';
+import Awards from './components/fade';
+import Committees from "./committees/page";
 
 
 //console.log(fetchData());
@@ -125,70 +127,89 @@ export default function Home() {
       
       {/* Post-home, about */}
       <div id="parent">
-        <div id="narrow" className="text-7xl text-center relative text-black flex-col left-15 mt-40">
+        <div id="narrow" className="text-7xl text-center relative text-black flex-col left-15 mt-30">
           What <br /> is <br /> RAS?
         </div>
-        <div id="wide" className="flex text-3xl justify-center text-black mt-45 relative leading-12">
+        <div id="wide" className="flex text-3xl justify-center text-black mt-35 relative leading-12">
           We are a student organization open to students from any background and major.<br/>
           Since 1997, we've helped students gain practical multi-disciplinary experience <br/>
           in the lab, then demonstrated our abilities at various robotics competitions while<br/> 
           promoting robotics via community outreach.
         </div>
       </div>
+      <div className="flex">
 
-      <div className = "w-full flex justify-center">
+{/* <div className="mx-auto flex grid grid-cols-2 gap-16 p-4 mt-10"> */}
+<div className="mx-auto flex grid grid-cols-4 gap-16 p-4 mt-10">
+  <a
+    href="/"
+    className="inline-flex items-center justify-center truncate text-4xl hover:cursor-pointer px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]"
+  >
+    Leadership
+  </a>
+  <a
+    href="/#committees"
+    className="inline-flex text-4xl items-center justify-center hover:cursor-pointer px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]"
+  >
+    Committees
+  </a>
+    <a
+    href="/"
+    className="inline-flex text-4xl items-center justify-center hover:cursor-pointer px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]"
+  >
+    Blog
+  </a>
+  <a
+    href="/"
+    className="inline-flex items-center justify-center text-4xl hover:cursor-pointer px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]"
+  >
+    Support RAS
+  </a>
+</div>
+  {/* Left side: Image
+  <div className="flex">
+  <img
+    src="/images/rbm/rmteamlead.jpg"
+    alt="Your description"
+    className="flex object-contain h-auto justify-center mr-15"
+    style = {{width: width/2}}
+  />
+</div> */}
+</div>
+    {/* <div className = "flex">
+      <div className = "flex w-[50%] flex-col items-center">
         <a href = "/committees" id = "committees" className = {`inline-flex mt-25 text-6xl hover:cursor-pointer
           px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]`}>
           Committees
         </a>
-      </div>
-      <div className = "text-black text-center text-2xl mt-5 mb-20"> 
+        <div className = "text-black text-center text-2xl mt-5 mb-10"> 
         All of our committees are happy to accept new members! <br/>
+        </div>
       </div>
+      <div className = "flex w-[50%] flex-col items-center">
+        <a href = "/committees" id = "committees" className = {`inline-flex mt-25 text-6xl hover:cursor-pointer
+          px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]`}>
+          Leadership
+        </a>
+        <div className = "text-black text-center text-2xl mt-5 mb-10"> 
+          Meet our officers! <br/>
+        </div>
+      </div>
+    </div> */}
 
       {/* Awards and total club photo :) */}
       <div className = "flex mt-15">
         <img
           src = "/images/rbm/rmteamlead.jpg"
-          className='flex ml-15 mr-auto z-5 mt-10'
+          className='flex ml-15 justify-start z-5 mt-10 object-contain h-auto'
           style = {{width: width/2}}
         />
-        <div className = "width-[50%] ml-5">
-          <div className="text-6xl relative text-center text-black mt-5">
-            Recent Awards
-          </div>
-          <div className = "text-black text-3xl mt-10 m-auto">
-            <div className = 'font-bold'>2024</div>
-            VEX AI Robotics Competition World Champion (Excellence Award)<br/>
-            <div className = 'font-bold'>2023</div> VEXU World Championship Build Award<br/>
-            <div className = 'font-bold'>2022</div> RoboMaster - First Prize - 4th in 2022 North American RoboMaster Competition<br/>
-            {/* 2013<br/> IGVC - 15th place in AutoNav Challenge - DoloRAS<br/>
-            2007<br/> IGVC JAUS Level 1 Award; BlastyRAS, IEEE Region 5 - 5th Best Run - Whiny 1.1, FIRST - Rookie All-Star Award, Nationals Qualification - TinMan<br/>
-            2006:<br/>IGVC - Highest Rookie Score - RASlow, IEEE Region 5 - Final Qualification, 4th Highest Score - Whiny, DPRG - Outdoor Long Haul, 2nd Place - RASlow, BEST - BEST Mentor Award<br/>
-            2005<br/> DPRG - RoboRama, 2nd Place<br/>
-            2004<br/> IEEE Region 5 - Finals Qualification - Kim Smith<br/> */}
-          </div>
-        </div>
-
+        <Awards/>
       </div>
 
-      {/* Maybe another text box or smthn here before robots? */}
-
-      {/* 3d render experiments */}
-      {/* 
-      <div id="3d_meshs" className="flex float-right w-full h-[50vh]">
-        <Scene/>
-      </div>
-      <div>
-        <Scene2/>
-      </div>
-      <div>
-        <Scene3/>
-      </div>
-      <div>
-        <Scene4/>
-      </div> 
-      */}
+      <div id = "committees" className = "text-black text-6xl text-center mt-20">Committees</div>
+      <div> <Committees/> </div>
+      <div className = "h-[10vh] text-black text-3xl text-center mt-40"> Site footer here!</div>
     </div>
   );
 }

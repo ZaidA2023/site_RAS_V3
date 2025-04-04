@@ -9,7 +9,7 @@ return (
 <div>
   <Navbar scrollSet = {false} opacitySet = {false}/>
   {/* VexU title and slides */}
-  <div className = "mt-30 text-black flex">
+  <div className = " text-black flex">
   <div className = "text-start ml-20 text-4xl">
     VEXU
   </div>

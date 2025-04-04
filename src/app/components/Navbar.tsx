@@ -20,8 +20,9 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const sections: NavSection[] = useMemo(() => [
     { id: '', label: 'Home' },
-    { id: 'committees', label: 'Committees' },
-    { id: 'contact', label: 'Contact' },
+    { id: '#committees', label: 'Join' },
+    { id: 'support', label: 'Supporters' },
+    { id: 'blog', label: 'Blog' },
   ], []);
 
   const [opacity, setOpacity] = useState<number>(scrollSet ? 0 : 1);
@@ -83,8 +84,8 @@ const Navbar: React.FC<NavbarProps> = ({
               key={section.id}
               href={`/${section.id}`}
               className={`
-                px-4 py-2 rounded-full font-bold transition duration-300
-                pointer-events-auto border-transparent hover:bg-[#BF5700] hover:text-white
+                px-4 py-2 rounded-full font-bold transition duration-300 hover:cursor-pointer
+                pointer-events-auto border-transparent hover:bg-[#BF5700] hover:text-white 
                 ${scrolled ? 'clickable' : ""}
                 ${scrolled && !inverse ? 'text-black' : 'text-white'}
               `}
