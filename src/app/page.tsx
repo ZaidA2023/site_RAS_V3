@@ -1,14 +1,12 @@
 "use client"
 
-// import {NotionToMarkdown} from "notion-to-md";
-// import fetchData  from "./components/Notion"
 import Navbar from "./components/Navbar";
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Slideshow from './components/Slideshow';
 import {slides, Redir} from './components/slides';
 import Awards from './components/fade';
-import Committees from "./committees/page";
+import Committees from "./components/committees";
 
 
 //console.log(fetchData());
@@ -154,7 +152,7 @@ export default function Home() {
     Committees
   </a>
     <a
-    href="/"
+    href="/blog"
     className="inline-flex text-4xl items-center justify-center hover:cursor-pointer px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]"
   >
     Blog

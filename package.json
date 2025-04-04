@@ -14,10 +14,13 @@
     "@react-three/fiber": "^9.0.4",
     "@splidejs/react-splide": "^0.7.12",
     "framer-motion": "^12.4.10",
+    "gray-matter": "^4.0.3",
     "next": "15.2.1",
     "notion-to-md": "^3.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "rehype-raw": "^7.0.0",
     "three": "^0.174.0",
     "three-stdlib": "^2.35.14"
   },
