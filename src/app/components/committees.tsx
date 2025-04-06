@@ -2,12 +2,10 @@
 
 import {slides} from "./slidesData";
 import Slideshow from "./Slideshow";
-import Navbar from "./Navbar";
 
 export default function Committees() {
 return (
 <div>
-  <Navbar scrollSet = {false} opacitySet = {false}/>
   {/* VexU title and slides */}
   <div className = "text-black flex">
   <div className = "slider-container text-start text-4xl">
