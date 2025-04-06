@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         <div className="flex justify-center mb-2">
           <a 
             className="arrow cursor-pointer"
-            href="/#home"
+            href="#top"
             aria-label="Go to new URL"
           ></a>
         </div>
