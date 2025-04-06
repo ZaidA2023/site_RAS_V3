@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react';
 import Awards from './components/awardsData';
 import Committees from "./components/committees";
 import Footer from "./components/footer";
-import Image from 'next/link'
 
 export default function Home() {
 

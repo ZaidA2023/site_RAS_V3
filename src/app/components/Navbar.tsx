@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link'
-import Image from 'next/link'
 
 interface NavSection {
   id: string;
