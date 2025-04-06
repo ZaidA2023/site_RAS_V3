@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
 import {leaders, officers, teamleads} from '../components/officers';
+import Footer from '../components/footer';
 
 const LeaderPage: React.FC = () => {
   return (
@@ -88,6 +89,7 @@ const LeaderPage: React.FC = () => {
         ))}
       </div>
       </main>
+    <Footer/>
     </>
   );
 };

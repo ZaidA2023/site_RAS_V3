@@ -6,6 +6,7 @@ import Modal from './Modal';
 import rehypeRaw from 'rehype-raw';
 import { Post } from '../components/posts';
 import Navbar from './Navbar';
+import Footer from '../components/footer';
 
 interface BlogListProps {
   posts: Post[];
@@ -30,6 +31,7 @@ const BlogList: React.FC<BlogListProps> = ({ posts }) => {
   };
 
   return (
+    <div>
     <div className = "text-black" style={{ padding: '20px' }}>
       <Navbar scrollSet={false} opacitySet={false}/>
       <h1 className = "text-5xl font-bold text-center mt-10 mb-10">Blog Posts</h1>
@@ -73,6 +75,8 @@ const BlogList: React.FC<BlogListProps> = ({ posts }) => {
           </div>
         )}
       </Modal>
+    </div>
+    <Footer/>
     </div>
   );
 };

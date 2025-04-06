@@ -1,6 +1,14 @@
 import React from 'react';
 
 const Footer: React.FC = () => {
+  const handleClick = (link) => {
+    if (link) {
+      window.open(
+        link,
+        '_blank'
+      );
+    }
+  };
   return (
     <footer className="bg-black/95 text-gray-200 py-8">
       <div className="container mx-auto px-4">
@@ -65,7 +73,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="text-sm text-center mb-[-1%]">
-          Site by <a href="/#home" className="text-[#BF5700] underline hover:text-[#cc7933]">Zaid Albustami</a>
+          Site by <div onClick={() => handleClick("https://github.com/ZaidA2023")} 
+          className="hover:cursor-pointer text-[#BF5700] underline hover:text-[#cc7933]">Zaid Albustami</div>
         </div>
       </div>
     </footer>
