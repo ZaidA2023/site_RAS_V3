@@ -22,7 +22,7 @@ const JoinPage: React.FC = () => {
           Join RAS!
         </h1>
 
-        <p className="text-black font-bold text-[clamp(1rem,3vw,1.5rem)] md:ml-[3%] mt-10 mx-auto max-w-3xl text-left">
+        <p className="text-black font-bold text-[clamp(1rem,4vw,1.5rem)] md:ml-[3%] mt-10 mx-auto max-w-4xl text-left">
           We live in EER room 0.822C, come in and say hi!
           <br />
           New members can join at any time. No experience necessary!
@@ -76,7 +76,7 @@ const JoinPage: React.FC = () => {
             <div
               onClick={() =>
                 handleClick(
-                  'https://docs.google.com/forms/d/e/1FAIpQLSdRvNc2R3vnG0AXu4k7bypacyeB2jgF_D1nDPq76kE8WIIBmQ/viewform'
+                  'https://discord.gg/ehmhUTZ2NZ'
                 )
               }
               className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
@@ -105,7 +105,7 @@ const JoinPage: React.FC = () => {
             <div
               onClick={() =>
                 handleClick(
-                  'https://docs.google.com/forms/d/e/1FAIpQLSdRvNc2R3vnG0AXu4k7bypacyeB2jgF_D1nDPq76kE8WIIBmQ/viewform'
+                  'https://discord.gg/Tcs987kkTp'
                 )
               }
               className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
@@ -115,7 +115,7 @@ const JoinPage: React.FC = () => {
             <div
               onClick={() =>
                 handleClick(
-                  'https://docs.google.com/forms/d/e/1FAIpQLSdRvNc2R3vnG0AXu4k7bypacyeB2jgF_D1nDPq76kE8WIIBmQ/viewform'
+                  'https://discord.gg/fU7qEDc322'
                 )
               }
               className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
@@ -125,7 +125,7 @@ const JoinPage: React.FC = () => {
             <div
               onClick={() =>
                 handleClick(
-                  'https://docs.google.com/forms/d/e/1FAIpQLSdRvNc2R3vnG0AXu4k7bypacyeB2jgF_D1nDPq76kE8WIIBmQ/viewform'
+                  'https://discord.gg/dXjmUvAm4q'
                 )
               }
               className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
@@ -135,7 +135,7 @@ const JoinPage: React.FC = () => {
             <div
               onClick={() =>
                 handleClick(
-                  'https://docs.google.com/forms/d/e/1FAIpQLSdRvNc2R3vnG0AXu4k7bypacyeB2jgF_D1nDPq76kE8WIIBmQ/viewform'
+                  'https://discord.gg/DvPsTE94qe'
                 )
               }
               className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
