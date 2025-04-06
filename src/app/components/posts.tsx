@@ -9,7 +9,7 @@ export interface Post {
   image: string;
 }
 
-const DEFAULT_IMAGE = '/default.jpg';
+const DEFAULT_IMAGE = '';
 
 const postsDirectory = path.join(process.cwd(), 'public', 'posts');
 

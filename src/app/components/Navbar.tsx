@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useEffect, useMemo, useRef } from 'react';
+import Link from 'next/link'
+import Image from 'next/link'
 
 interface NavSection {
   id: string;
@@ -86,7 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({
       )}
 
       <div className="relative flex items-center justify-between h-20 w-screen">
-        <a 
+        <Link 
           href="/#home" 
           className="clickable pointer-events-auto"
         >
@@ -97,11 +99,11 @@ const Navbar: React.FC<NavbarProps> = ({
             width={120}
             height={80}
           />
-        </a>
+        </Link>
 
         <div className="hidden md:flex w-full mx-auto justify-end gap-8 pr-8">
           {sections.map((section) => (
-            <a
+            <Link
               key={section.id}
               href={`/${section.id}`}
               className={`
@@ -116,7 +118,7 @@ const Navbar: React.FC<NavbarProps> = ({
               }}
             >
               {section.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -147,7 +149,7 @@ const Navbar: React.FC<NavbarProps> = ({
         >
           <div className="flex flex-col items-center py-4">
             {sections.map((section) => (
-              <a
+              <Link
                 key={section.id}
                 href={`/${section.id}`}
                 className={`w-full text-center px-4 py-3 font-bold transition-colors duration-300
@@ -156,7 +158,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => setIsMenuOpen(false)}
               >
                 {section.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

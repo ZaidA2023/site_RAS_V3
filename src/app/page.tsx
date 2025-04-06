@@ -5,14 +5,9 @@ import React, { useEffect, useState } from 'react';
 import Awards from './components/awardsData';
 import Committees from "./components/committees";
 import Footer from "./components/footer";
+import Image from 'next/link'
 
 export default function Home() {
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-  useEffect(() => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  }, []);
 
   const [opacity, setOpacity] = useState(1);
 
@@ -71,7 +66,7 @@ export default function Home() {
         </div>
         <div id="wide" className="mt-6 text-xl md:text-3xl text-center text-black leading-relaxed">
           We are a student organization open to students from any background and major.<br />
-          Since 1997, we've helped students gain practical multi-disciplinary experience<br />
+          Since 1997, we&apos;ve helped students gain practical multi-disciplinary experience<br />
           in the lab, then demonstrated our abilities at various robotics competitions while<br />
           promoting robotics via community outreach.
         </div>

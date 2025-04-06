@@ -83,6 +83,22 @@ const JoinPage: React.FC = () => {
             >
               Main Discord
             </div>
+            <div
+              onClick={() =>
+                handleClick('https://www.youtube.com/@ut_ieee_ras')
+              }
+              className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
+            >
+              Youtube
+            </div>
+            <div
+              onClick={() =>
+                handleClick('https://github.com/ut-ras')
+              }
+              className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
+            >
+              Github
+            </div>
             <div className="text-black text-[clamp(1.5rem,4vw,2rem)] mt-6">
               Committee Specific Discords
             </div>
@@ -125,22 +141,6 @@ const JoinPage: React.FC = () => {
               className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
             >
               VexU
-            </div>
-            <div
-              onClick={() =>
-                handleClick('https://www.youtube.com/@ut_ieee_ras')
-              }
-              className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
-            >
-              Youtube
-            </div>
-            <div
-              onClick={() =>
-                handleClick('https://github.com/ut-ras')
-              }
-              className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
-            >
-              Github
             </div>
           </div>
 

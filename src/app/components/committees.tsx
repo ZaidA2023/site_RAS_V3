@@ -1,6 +1,6 @@
 'use client'
 
-import {slides} from "./slidesData";
+import {vexSlides, dbSlides, rbmSlides, igvcSlides, thonSlides, advSlides} from "./slidesData";
 import Slideshow from "./Slideshow";
 
 export default function Committees() {
@@ -13,7 +13,7 @@ return (
   </div>
   </div>
   <div className = "wrapper w-full bg-transparent relative mt-5">
-  <Slideshow slides = {slides.vexSlides}/>
+  <Slideshow slides = {vexSlides}/>
   </div>
   {/* Demobots title and slides */}
   <div className = "mt-10 text-black flex">
@@ -22,7 +22,7 @@ return (
   </div>
   </div>
   <div className = "wrapper w-full bg-transparent relative mt-5">
-  <Slideshow slides = {slides.dbSlides}/>
+  <Slideshow slides = {dbSlides}/>
   </div>
   {/* Robomaster title and slides */}
   <div className = "mt-10 text-black flex">
@@ -31,7 +31,7 @@ return (
   </div>
   </div>
   <div className = "wrapper w-full bg-transparent relative mt-5">
-  <Slideshow slides = {slides.rbmSlides}/>
+  <Slideshow slides = {rbmSlides}/>
   </div>
   {/* IGVC title and slides */}
   <div className = "mt-10 text-black flex">
@@ -40,7 +40,7 @@ return (
   </div>
   </div>
   <div className = "wrapper w-full bg-transparent relative mt-5">
-  <Slideshow slides = {slides.igvcSlides}/>
+  <Slideshow slides = {igvcSlides}/>
   </div>
   {/* Robotathon title and slides */}
   <div className = "mt-10 text-black flex">
@@ -49,7 +49,7 @@ return (
   </div>
   </div>
   <div className = "wrapper w-full bg-transparent relative mt-5">
-  <Slideshow slides = {slides.thonSlides}/>
+  <Slideshow slides = {thonSlides}/>
   </div>
   {/* Business title and slides */}
   <div className = "mt-10 text-black flex">
@@ -58,7 +58,7 @@ return (
   </div>
   </div>
   <div className = "wrapper w-full bg-transparent relative mt-5">        
-  <Slideshow slides = {slides.advSlides}/>
+  <Slideshow slides = {advSlides}/>
   </div>
 </div>
 )
