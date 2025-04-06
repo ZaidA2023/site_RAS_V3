@@ -1,7 +1,7 @@
 
 export namespace slides {
   export const vexSlides = [
-    { id: 1, img: '/images/vex/vex.jpeg' },
+    { id: 1, img: '/images/vex/vex.jpeg', caption: "hello", link: "https://www.google.com/" },
     { id: 2, img: '/images/vex/vex1.jpg' },
     { id: 3, img: '/images/vex/vex2.jpeg' },
     { id: 4, img: '/images/vex/vex3.jpg' },

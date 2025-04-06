@@ -31,7 +31,7 @@ const BlogList: React.FC<BlogListProps> = ({ posts }) => {
 
   return (
     <div className = "text-black" style={{ padding: '20px' }}>
-      <Navbar opacitySet={false} inverse={false} scrollSet= {false}/>
+      <Navbar scrollSet={false} opacitySet={false}/>
       <h1 className = "text-5xl font-bold text-center mt-10 mb-10">Blog Posts</h1>
       <div
         style={{
@@ -55,11 +55,11 @@ const BlogList: React.FC<BlogListProps> = ({ posts }) => {
             <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>
               {post.title}
             </div>
-            <img
+            {/* <img
               src={post.image}
               alt={post.title}
               style={{ width: '100%' }}
-            />
+            /> */}
           </div>
         ))}
       </div>

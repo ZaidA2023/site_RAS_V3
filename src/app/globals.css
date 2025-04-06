@@ -57,7 +57,7 @@ html {
 
 .slide-img {
   /*aspect-ratio: 4/4;*/
-  height: 300px;
+  height: 250px;
   border-radius: 4px;
   /*filter: brightness(70%)*/
 }
@@ -74,4 +74,12 @@ html {
 
 .splide__track {
   max-width: 100%;   /* Ensure the track respects the container’s width */
+}
+
+.arrow {
+  display: inline-block;
+  padding: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(-135deg);
 }

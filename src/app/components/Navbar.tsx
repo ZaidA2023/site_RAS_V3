@@ -19,10 +19,10 @@ const Navbar: React.FC<NavbarProps> = ({
   inverse = false 
 }) => {
   const sections: NavSection[] = useMemo(() => [
-    { id: '', label: 'Home' },
-    { id: '#committees', label: 'Join' },
+    { id: 'join', label: 'Join' },
     { id: 'support', label: 'Supporters' },
     { id: 'blog', label: 'Blog' },
+    { id: 'leaders', label: 'Leadership' },
   ], []);
 
   const [opacity, setOpacity] = useState<number>(scrollSet ? 0 : 1);

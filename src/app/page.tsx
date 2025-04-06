@@ -2,11 +2,9 @@
 
 import Navbar from "./components/Navbar";
 import React, { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
-import Slideshow from './components/Slideshow';
-import {slides, Redir} from './components/slides';
 import Awards from './components/fade';
 import Committees from "./components/committees";
+import Footer from "./components/footer";
 
 
 //console.log(fetchData());
@@ -92,7 +90,7 @@ export default function Home() {
 
   return (
     <div className="relative">
-      <Navbar scrollSet={true} opacitySet={true}/>
+      <Navbar scrollSet = {true} inverse = {false}/>
       {/* Background image */}
       <div className="relative w-full">
         <img
@@ -135,65 +133,6 @@ export default function Home() {
           promoting robotics via community outreach.
         </div>
       </div>
-      <div className="flex">
-
-{/* <div className="mx-auto flex grid grid-cols-2 gap-16 p-4 mt-10"> */}
-<div className="mx-auto flex grid grid-cols-4 gap-16 p-4 mt-10">
-  <a
-    href="/"
-    className="inline-flex items-center justify-center truncate text-4xl hover:cursor-pointer px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]"
-  >
-    Leadership
-  </a>
-  <a
-    href="/#committees"
-    className="inline-flex text-4xl items-center justify-center hover:cursor-pointer px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]"
-  >
-    Committees
-  </a>
-    <a
-    href="/blog"
-    className="inline-flex text-4xl items-center justify-center hover:cursor-pointer px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]"
-  >
-    Blog
-  </a>
-  <a
-    href="/"
-    className="inline-flex items-center justify-center text-4xl hover:cursor-pointer px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]"
-  >
-    Support RAS
-  </a>
-</div>
-  {/* Left side: Image
-  <div className="flex">
-  <img
-    src="/images/rbm/rmteamlead.jpg"
-    alt="Your description"
-    className="flex object-contain h-auto justify-center mr-15"
-    style = {{width: width/2}}
-  />
-</div> */}
-</div>
-    {/* <div className = "flex">
-      <div className = "flex w-[50%] flex-col items-center">
-        <a href = "/committees" id = "committees" className = {`inline-flex mt-25 text-6xl hover:cursor-pointer
-          px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]`}>
-          Committees
-        </a>
-        <div className = "text-black text-center text-2xl mt-5 mb-10"> 
-        All of our committees are happy to accept new members! <br/>
-        </div>
-      </div>
-      <div className = "flex w-[50%] flex-col items-center">
-        <a href = "/committees" id = "committees" className = {`inline-flex mt-25 text-6xl hover:cursor-pointer
-          px-7 py-5 rounded-full transition duration-300 border-transparent hover:bg-[#994600] bg-[#BF5700]`}>
-          Leadership
-        </a>
-        <div className = "text-black text-center text-2xl mt-5 mb-10"> 
-          Meet our officers! <br/>
-        </div>
-      </div>
-    </div> */}
 
       {/* Awards and total club photo :) */}
       <div className = "flex mt-15">
@@ -206,8 +145,8 @@ export default function Home() {
       </div>
 
       <div id = "committees" className = "text-black text-6xl text-center mt-20">Committees</div>
-      <div> <Committees/> </div>
-      <div className = "h-[10vh] text-black text-3xl text-center mt-40"> Site footer here!</div>
+      <> <Committees/> </>
+      <> <Footer/> </>
     </div>
   );
 }
