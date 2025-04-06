@@ -50,13 +50,10 @@ export default function Awards() {
 
   const [headerText, setHeaderText] = useState(initialHeader);
   const [awardContent, setAwardContent] = useState(initialAwardContent);
-  // Controls the fade transition
   const [visible, setVisible] = useState(true);
-  // Tracks the current view 
   const [view, setView] = useState("initial");
 
   const handleClick = () => {
-    // Fade out current text
     setVisible(false);
     setTimeout(() => {
       if (view === "initial") {

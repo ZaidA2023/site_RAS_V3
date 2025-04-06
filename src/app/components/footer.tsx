@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                       Join
                   </button>
                 </a>
-                <a href = "/contact">
+                <a href = "/support">
                   <button className="hover:cursor-pointer w-full bg-[#BF5700] text-white py-2 px-4 rounded hover:bg-[#c5681a] transition-colors">
                     Supporters
                   </button>

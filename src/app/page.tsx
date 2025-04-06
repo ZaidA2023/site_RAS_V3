@@ -2,7 +2,7 @@
 
 import Navbar from "./components/Navbar";
 import React, { useEffect, useState } from 'react';
-import Awards from './components/fade';
+import Awards from './components/awardsData';
 import Committees from "./components/committees";
 import Footer from "./components/footer";
 

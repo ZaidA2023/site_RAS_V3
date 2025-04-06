@@ -1,6 +1,6 @@
 'use client'
 
-import {slides} from "./slides";
+import {slides} from "./slidesData";
 import Slideshow from "./Slideshow";
 import Navbar from "./Navbar";
 

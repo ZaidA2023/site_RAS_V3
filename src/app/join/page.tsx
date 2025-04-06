@@ -20,7 +20,8 @@ const JoinPage: React.FC = () => {
     <div className = "relative">
       <div className = "text-black text-center font-bold text-5xl mt-5">Join RAS!</div> 
       <div className = "text-black text-start font-bold text-xl mt-10 ml-[5%]">
-      New members can join at any time. No experience necessary! <br/>
+      We live in EER room 0.822C, come in and say hi!<br/>
+      New members can join at any time. No experience necessary! <br/> 
       New members are required fill a <a onClick={() => handleClick("https://docs.google.com/forms/d/e/1FAIpQLSf5v1L3MB3naSaYESixKXnwWSFYm6uatYRvCiesrBWiLwvQuQ/viewform")} 
       className="text-[#BF5700] underline hover:text-[#cc7933] hover:cursor-pointer">Membership Form</a> and <a 
       onClick={() => handleClick("https://docs.google.com/forms/d/e/1FAIpQLSdRvNc2R3vnG0AXu4k7bypacyeB2jgF_D1nDPq76kE8WIIBmQ/viewform")}  

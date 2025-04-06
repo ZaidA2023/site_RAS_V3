@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Navbar from '../components/Navbar';
-import {leaders, officers, teamleads} from '../components/officers';
+import {leaders, officers, teamleads} from '../components/officersData';
 import Footer from '../components/footer';
 
 const LeaderPage: React.FC = () => {

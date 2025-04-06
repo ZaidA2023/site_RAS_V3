@@ -51,6 +51,7 @@ const BlogList: React.FC<BlogListProps> = ({ posts }) => {
               padding: '10px',
               borderRadius: '4px',
               cursor: 'pointer',
+              backgroundColor: '#e6e4d8'
             }}
           >
             <div style={{ color: '#666', marginBottom: '8px' }}>{post.date}</div>
