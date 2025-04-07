@@ -23,6 +23,7 @@ export default function Home() {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // run initially in case its a reload and we're already scrolled
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

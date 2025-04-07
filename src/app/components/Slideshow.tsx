@@ -24,8 +24,8 @@ const Slideshow = ({ slides }) => {
             autoWidth: true,
           }}
         >
-          {slides.map((slide) => (
-            <SplideSlide key={slide.id}>
+          {slides.map((slide, idx) => (
+            <SplideSlide key={idx}>
               <div className="relative">
                 <Image
                   src={slide.img}
@@ -36,7 +36,7 @@ const Slideshow = ({ slides }) => {
                   onClick={() => handleImageClick(slide.link)}
                 />
                 {slide.caption && (
-                  <div className="absolute bottom-0 left-0 w-full bg-black/60 text-white text-center p-2">
+                  <div className="text-left text-black font-bold text-2xl pl-2 mt-2">
                     {slide.caption}
                   </div>
                 )}
