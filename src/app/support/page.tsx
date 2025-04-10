@@ -33,12 +33,25 @@ const Support: React.FC = () => {
           if you have any questions or for more information. <br /> <br />
           If you would like to become a supporter, please view our{' '}
           <a 
-            onClick={() => handleClick("https://drive.google.com/file/d/1PpTgN_sBkZPoK2QfrdiO4NSIL-gvcZ-N/view")}  
+            href="https://drive.google.com/file/d/1PpTgN_sBkZPoK2QfrdiO4NSIL-gvcZ-N/view"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[#BF5700] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
           >
             corporate packet
           </a>{' '}
           for details.
+<br/>
+          However, if you would like to simply donate to us, you can do that on
+          {' '}
+           <a 
+            href="https://hcb.hackclub.com/donations/start/austin-ieee-ras"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#BF5700] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
+          >
+           our donation page.
+          </a>{' '}
         </div>
 
         <div className="text-black text-center font-bold text-3xl md:text-5xl mt-5 mb-5">
