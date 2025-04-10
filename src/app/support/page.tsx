@@ -5,12 +5,6 @@ import Footer from '../components/footer';
 import SponsorDisplay from '../components/sponsorsData';
 
 const Support: React.FC = () => {
-  const handleClick = (link) => {
-    if (link) {
-      window.open(link, '_blank');
-    }
-  };
-
   return (
     <div>
       <div className="mb-25">
