@@ -31,10 +31,10 @@ const LeaderPage: React.FC = () => {
                   className={member.profileLink.length < 5 ? "pointer-events-none" : ""}
                 >
                   <Image
-                    src={`/images/leaders/${member.name.replace(/ /g, '-')}.jpg`}
-                    onError={(e) => (e.currentTarget.src = "/images/ras_logo_big.png")}
+                    src={member.picture ? member.picture : "/images/ras_logo_big.png"}
                     alt={member.name}
                     className="object-contain rounded-full"
+                    placeholder='blur'
                     fill
                   />
                 </a>
@@ -69,10 +69,10 @@ const LeaderPage: React.FC = () => {
                   className={member.profileLink.length < 5 ? "pointer-events-none" : ""}
                 >
                   <Image
-                    src={`/images/leaders/${member.name.replace(/ /g, '-')}.jpg`}
-                    onError={(e) => (e.currentTarget.src = "/images/ras_logo_big.png")}
+                    src={member.picture ? member.picture : "/images/ras_logo_big.png"}
                     alt={member.name}
                     className="object-contain rounded-full"
+                    placeholder='blur'
                     fill
                   />
                 </a>
@@ -107,10 +107,10 @@ const LeaderPage: React.FC = () => {
               >
                 <div className="relative rounded-full w-16 h-16 sm:w-20 sm:h-20">
                   <Image
-                    src={`/images/leaders/${member.name.replace(/ /g, '-')}.jpg`}
-                    onError={(e) => (e.currentTarget.src = "/images/ras_logo_big.png")}
+                    src={member.picture ? member.picture : "/images/ras_logo_big.png"}
                     alt={member.name}
                     className="object-contain rounded-full"
+                    placeholder='blur'
                     fill
                   />
                 </div>

@@ -6,6 +6,8 @@ import Image from 'next/image'; // Added import for next/image
 import Awards from './components/awardsData';
 import Committees from "./components/committees";
 import Footer from "./components/footer";
+import BackgroundPic from "../../public/images/vex/vex.jpeg"
+import RoboMTeamPic from "../../public/images/rbm/rmteamlead.jpg"
 
 export default function Home() {
 
@@ -36,9 +38,10 @@ export default function Home() {
         <Image
           id="home"
           className="w-full h-screen object-cover transform scale-110"
-          src="/images/vex/vex.jpeg"
+          src={BackgroundPic}
           alt="Background"
           fill
+          placeholder="blur"
           priority
         />
         {/* Home Gradient */}
@@ -81,11 +84,12 @@ export default function Home() {
       {/* Awards and total club photo */}
       <div className="flex flex-col md:flex-row items-center mt-8 md:mt-15 px-4">
         <Image
-          src="/images/rbm/rmteamlead.jpg"
+          src={RoboMTeamPic}
           className="w-full md:w-1/2 object-contain mt-10"
           alt="Team Lead"
           width={500}
           height={500}
+          placeholder="blur"
         />
         <div className="w-full md:w-1/2">
           <Awards />
