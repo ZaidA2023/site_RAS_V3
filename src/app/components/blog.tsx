@@ -7,6 +7,7 @@ import rehypeRaw from 'rehype-raw';
 import { Post } from '../components/posts';
 import Navbar from './Navbar';
 import Footer from '../components/footer';
+import Image from 'next/image'; // Added import for next/image
 
 interface BlogListProps {
   posts: Post[];
@@ -55,11 +56,13 @@ const BlogList: React.FC<BlogListProps> = ({ posts }) => {
                 </div>
               </div>
               {post.image && (
-              <img
-                src={post.image}
-                alt={""}
-                className = "w-[40%]  ml-auto"
-              />
+                <Image
+                  src={post.image}
+                  alt=""
+                  className="w-[40%] ml-auto"
+                  width={200}
+                  height={200}
+                />
               )}
               </div>
             ))}

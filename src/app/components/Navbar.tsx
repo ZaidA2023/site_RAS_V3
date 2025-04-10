@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import Link from 'next/link'
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface NavSection {
   id: string;
@@ -92,12 +93,13 @@ const Navbar: React.FC<NavbarProps> = ({
           href="/#home"
           className="clickable pointer-events-auto"
         >
-          <img
+          <Image
             src={logoSrc}
             alt="RAS Logo"
             className="md:pl-8 md:pr-0 pr-12"
             width={120}
             height={80}
+            priority
           />
         </Link>
 

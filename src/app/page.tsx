@@ -2,6 +2,7 @@
 
 import Navbar from "./components/Navbar";
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image'; // Added import for next/image
 import Awards from './components/awardsData';
 import Committees from "./components/committees";
 import Footer from "./components/footer";
@@ -32,11 +33,13 @@ export default function Home() {
       <Navbar scrollSet={true} inverse={false} />
       {/* Background image */}
       <div className="relative w-full h-screen overflow-hidden">
-        <img
+        <Image
           id="home"
           className="w-full h-screen object-cover transform scale-110"
           src="/images/vex/vex.jpeg"
           alt="Background"
+          fill
+          priority
         />
         {/* Home Gradient */}
         <div className="absolute inset-0 bg-[linear-gradient(90deg,black_0%,black_5%,transparent_35%,transparent_100%)]"></div> 
@@ -77,10 +80,12 @@ export default function Home() {
 
       {/* Awards and total club photo */}
       <div className="flex flex-col md:flex-row items-center mt-8 md:mt-15 px-4">
-        <img
+        <Image
           src="/images/rbm/rmteamlead.jpg"
           className="w-full md:w-1/2 object-contain mt-10"
           alt="Team Lead"
+          width={500}
+          height={500}
         />
         <div className="w-full md:w-1/2">
           <Awards />

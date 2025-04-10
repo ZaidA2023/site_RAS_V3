@@ -30,11 +30,12 @@ const LeaderPage: React.FC = () => {
                   href={member.profileLink}
                   className={member.profileLink.length < 5 ? "pointer-events-none" : ""}
                 >
-                  <img
+                  <Image
                     src={`/images/leaders/${member.name.replace(/ /g, '-')}.jpg`}
                     onError={(e) => (e.currentTarget.src = "/images/ras_logo_big.png")}
                     alt={member.name}
-                    className="object-contain rounded-full w-full h-full"
+                    className="object-contain rounded-full"
+                    fill
                   />
                 </a>
               </div>
@@ -67,11 +68,12 @@ const LeaderPage: React.FC = () => {
                   href={member.profileLink}
                   className={member.profileLink.length < 5 ? "pointer-events-none" : ""}
                 >
-                  <img
+                  <Image
                     src={`/images/leaders/${member.name.replace(/ /g, '-')}.jpg`}
                     onError={(e) => (e.currentTarget.src = "/images/ras_logo_big.png")}
                     alt={member.name}
-                    className="object-contain rounded-full w-full h-full"
+                    className="object-contain rounded-full"
+                    fill
                   />
                 </a>
               </div>
@@ -104,11 +106,12 @@ const LeaderPage: React.FC = () => {
                 className={member.profileLink.length < 5 ? "pointer-events-none" : ""}
               >
                 <div className="relative rounded-full w-16 h-16 sm:w-20 sm:h-20">
-                  <img
+                  <Image
                     src={`/images/leaders/${member.name.replace(/ /g, '-')}.jpg`}
                     onError={(e) => (e.currentTarget.src = "/images/ras_logo_big.png")}
                     alt={member.name}
-                    className="object-contain rounded-full w-full h-full"
+                    className="object-contain rounded-full"
+                    fill
                   />
                 </div>
               </a>
