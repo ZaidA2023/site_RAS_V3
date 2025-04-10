@@ -65,11 +65,11 @@ const Footer: React.FC = () => {
             >
               ut.ieee.ras+web@gmail.com
             </p>
-            <text
+            <p
               className="hover:text-white text-base md:text-lg transition-colors"
             >
               UT Austin
-            </text>
+            </p>
             {/* New Contact Links */}
             <Link
               href="https://www.instagram.com/ut_ieee_ras/"
