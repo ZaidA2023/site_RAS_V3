@@ -45,7 +45,7 @@ html {
   display: flex;
 }
 #narrow {
-  padding-right: 15%;
+  /*padding-right: 15%;*/
 }
 #wide {
   flex: 1;
@@ -82,4 +82,16 @@ html {
   border: solid white;
   border-width: 0 3px 3px 0;
   transform: rotate(-135deg);
+}
+
+.button {
+  background-color: var(--foreground-hover, #BF5700); /* Fallback to orange */
+  color: white; /* Ensure text is visible */
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e07a3f; /* Use a lighter orange for hover */
 }

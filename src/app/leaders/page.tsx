@@ -30,11 +30,11 @@ const LeaderPage: React.FC = () => {
                   href={member.profileLink}
                   className={member.profileLink.length < 5 ? "pointer-events-none" : ""}
                 >
-                  <Image
-                    src={member.photo}
+                  <img
+                    src={`/images/leaders/${member.name.replace(/ /g, '-')}.jpg`}
+                    onError={(e) => (e.currentTarget.src = "/images/ras_logo_big.png")}
                     alt={member.name}
-                    fill
-                    className="object-contain rounded-full"
+                    className="object-contain rounded-full w-full h-full"
                   />
                 </a>
               </div>
@@ -67,11 +67,11 @@ const LeaderPage: React.FC = () => {
                   href={member.profileLink}
                   className={member.profileLink.length < 5 ? "pointer-events-none" : ""}
                 >
-                  <Image
-                    src={member.photo}
+                  <img
+                    src={`/images/leaders/${member.name.replace(/ /g, '-')}.jpg`}
+                    onError={(e) => (e.currentTarget.src = "/images/ras_logo_big.png")}
                     alt={member.name}
-                    fill
-                    className="object-contain rounded-full"
+                    className="object-contain rounded-full w-full h-full"
                   />
                 </a>
               </div>
@@ -82,7 +82,7 @@ const LeaderPage: React.FC = () => {
                 {member.title}
               </p>
               <p className="text-[clamp(0.7rem,1.8vw,1rem)] text-[#BF5700]">
-                <a href={`mailto:${member.email}`}>{member.email}</a>
+                Discord: {member.discord}
               </p>
             </div>
           ))}
@@ -104,11 +104,11 @@ const LeaderPage: React.FC = () => {
                 className={member.profileLink.length < 5 ? "pointer-events-none" : ""}
               >
                 <div className="relative rounded-full w-16 h-16 sm:w-20 sm:h-20">
-                  <Image
-                    src={member.photo}
+                  <img
+                    src={`/images/leaders/${member.name.replace(/ /g, '-')}.jpg`}
+                    onError={(e) => (e.currentTarget.src = "/images/ras_logo_big.png")}
                     alt={member.name}
-                    fill
-                    className="object-contain rounded-full"
+                    className="object-contain rounded-full w-full h-full"
                   />
                 </div>
               </a>
@@ -116,9 +116,6 @@ const LeaderPage: React.FC = () => {
                 <h3 className="text-center font-semibold text-[clamp(0.9rem,2vw,1.3rem)] text-black">
                   {member.name}
                 </h3>
-                <p className="text-center text-[clamp(0.7rem,1.8vw,1rem)] text-[#BF5700]">
-                  <a href={`mailto:${member.email}`}>{member.email}</a>
-                </p>
               </div>
             </div>
           ))}

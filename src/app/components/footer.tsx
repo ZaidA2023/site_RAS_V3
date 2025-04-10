@@ -50,30 +50,58 @@ const Footer: React.FC = () => {
                   Leadership
                 </button>
               </Link>
+              <Link href="https://hcb.hackclub.com/donations/start/austin-ieee-ras">
+                <button className="hover:cursor-pointer w-full bg-[#BF5700] text-white py-2 px-4 rounded hover:bg-[#c5681a] transition-colors">
+                  Donate
+                </button>
+              </Link>
             </div>
           </div>
           {/* Contact Links */}
           <div className="flex flex-col space-y-2 mb-4 mt-0 md:mb-8 md:mt-[-2%]">
             <h3 className="text-lg md:text-xl font-semibold">Contact Us</h3>
-            <Link 
-              href="mailto:info@company.com" 
-              className="hover:text-[#cc7933] text-[#c5681a] text-base md:text-lg transition-colors"
-            >
-              blahblah@blah.com
-            </Link>
-            <Link 
-              href="tel:+1234567890" 
+            <p 
               className="hover:text-white text-base md:text-lg transition-colors"
             >
-              +1 (234) 567-890
-            </Link>
+              ut.ieee.ras+web@gmail.com
+            </p>
+            <text
+              className="hover:text-white text-base md:text-lg transition-colors"
+            >
+              UT Austin
+            </text>
+            {/* New Contact Links */}
             <Link
-              href="https://www.google.com/maps/place/Your+Address"
+              href="https://www.instagram.com/ut_ieee_ras/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white text-base md:text-lg transition-colors"
+              className="hover:text-[#cc7933] text-[#BF5700] text-base md:text-lg transition-colors"
             >
-              Address?
+              Instagram
+            </Link>
+            <Link
+              href="https://discord.gg/ehmhUTZ2NZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#cc7933] text-[#BF5700] text-base md:text-lg transition-colors"
+            >
+              Discord
+            </Link>
+            <Link
+              href="https://www.youtube.com/@ut_ieee_ras"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#cc7933] text-[#BF5700] text-base md:text-lg transition-colors"
+            >
+              Youtube
+            </Link>
+            <Link
+              href="https://github.com/ut-ras"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#cc7933] text-[#BF5700] text-base md:text-lg transition-colors"
+            >
+              Github
             </Link>
           </div>
         </div>

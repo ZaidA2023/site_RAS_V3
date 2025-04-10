@@ -79,7 +79,7 @@ export default function Awards() {
         {headerText}
       </div>
       <div
-        className={`flex flex-col w-full text-black text-3xl mt-10 text-start transition-opacity duration-500 ${
+        className={`flex flex-col w-full text-black text-3xl mt-10 text-center lg:text-start transition-opacity duration-500 ${
           visible ? "opacity-100" : "opacity-0"
         }`}
       >

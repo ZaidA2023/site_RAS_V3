@@ -1,95 +1,107 @@
-
-  interface officers {
+interface officers {
     name: string;
     title: string;
     email: string;
-    photo: string;
     profileLink: string;
-  }
+    discord?: string;
+}
 
-  interface leaders {
+interface leaders {
     name: string;
-    email: string;
-    photo: string;
     profileLink: string;
-  }
+}
 
-  export const officers: officers[] = [
+export const officers: officers[] = [
     { 
       name: 'Shreeya Garapaty', title: 'President', email: 'shreeya.garapaty@utexas.edu',
-      photo: '/images/ras_logo_big.png', profileLink: '' },
+      profileLink: '' },
     {
       name: 'Carolyn Hoang', title: 'Vice President', email: 'carolyn.hoang@utexas.edu',
-      photo: '/images/ras_logo_big.png', profileLink: '' },
+      profileLink: '' },
     { 
       name: 'Zaara Bilal', title: 'Secretary', email: 'zbilal@utexas.edu',
-      photo: '/images/.jpg', profileLink: '' },
+      profileLink: '' },
     {
-      name: 'Raghav Katta', title: 'Treasurer', email: 'raghav.katta@utexas.edu',
-      photo: '/images/.jpg', profileLink: '' },
+      name: 'Andrew Senyszyn', title: 'Treasurer', email: 'Andrewsenyszyn@utexas.edu',
+      profileLink: '' },
     {
-      name: 'Grace Li', title: 'Corporate Relations', email: 'gracewl@utexas.edu',
-      photo: '/images/.jpg', profileLink: '' },
-    {
-      name: 'Karmanyaah', title: 'Webmaster', email: 'idek@utexas.edu',
-      photo: '/images/.jpg', profileLink: '' },
-    {
-      name: 'Dhruv Bansal', title: 'Outreach Coordinator', email: 'dhruvbansal@utexas.edu',
-      photo: '/images/.jpg', profileLink: '' },
+      name: 'Colin Tan', title: 'Treasurer', email: 'colinyqt@utexas.edu',
+      profileLink: '' },
     {
       name: 'Toby Nguyen', title: 'Fundraising Coordinator', email: 'tan942@utexas.edu',
-      photo: '/images/.jpg', profileLink: '' },
+      profileLink: '' },
     {
-      name: 'Annie Vu', title: 'Special Events Coordinator', email: '??lt25546@utexas.edu',
-      photo: '/images/.jpg', profileLink: '' },
+      name: 'Grace Li', title: 'Corporate Relations', email: 'gracewl@utexas.edu',
+      profileLink: '' },
     {
-      name: 'Linh Tran', title: 'Special Events Coordinator', email: 'lt25546@utexas.edu',
-      photo: '/images/.jpg', profileLink: '' },
+      name: 'Dhruv Bansal', title: 'Outreach Coordinator', email: 'dhruvbansal@utexas.edu',
+      profileLink: '' },
     {
-      name: 'Richard Bai', title: 'Publicity Coordinator', email: 'richard.bai.1@utexas.edu',
-      photo: '/images/.jpg', profileLink: '' },
-  ];
+      name: 'Gustavo Villalobos', title: 'Special Events Coordinator', email: 'gvp05@utexas.edu',
+      profileLink: '' },
+    {
+      name: 'Annie Vu', title: 'Publicity Coordinator', email: 'Annie.2005@utexas.edu',
+      profileLink: '' },
+    {
+      name: 'Richard Bai', title: 'Publicity Coordinator', email: 'Richard.Bai.1@utexas.edu',
+      profileLink: '' },
+    {
+      name: 'Karmanyaah Malhotra', title: 'Webmaster', email: 'karmalhotra@utexas.edu',
+      profileLink: '' },
+];
 
-  export const teamleads: officers[] = [
+export const teamleads: officers[] = [
     {
-      name: 'Jake Tomczesyn', title: 'Demobots', email: ' ',
-      photo: '/images/.jpg', profileLink: '' },
+      name: 'Jake Tomczesyn', title: 'Demobots Committee Head', email: 'jake.tomczeszyn@utexas.edu',
+      profileLink: '', discord: '4jakers18' },
     {
-      name: 'Dhruv Nistala', title: 'IGVC', email: ' ',
-      photo: '/images/.jpg', profileLink: '' },
+      name: 'Dhruv Nistala', title: 'IGVC Committee Head', email: 'dhruv.nistala@utexas.edu',
+      profileLink: '', discord: 'awesomeguytheepic' },
     {
-      name: 'Eddie Liao', title: 'Robomaster', email: ' ',
-      photo: '/images/.jpg', profileLink: '' },
+      name: 'Tyler Hom', title: 'Robomaster Committee Head', email: '',
+      profileLink: '', discord: 'thehominator' },
     {
-      name: 'Yilin Jin', title: 'Robotathon', email: ' ',
-      photo: '/images/.jpg', profileLink: '' },
+      name: 'Jeffrey Chang', title: 'Robotathon Committee Head', email: '',
+      profileLink: '', discord: 'ohoftoryoy' },
     {
-      name: 'Hasif Shaikh', title: 'VexU', email: ' ',
-      photo: '/images/.jpg', profileLink: '' },
+      name: 'Hasif Shaikh', title: 'VexU Committee Head', email: '',
+      profileLink: '', discord: 'has02' },
     {
-      name: 'Grace Li', title: 'Corporate', email: ' ',
-      photo: '/images/.jpg', profileLink: '' },
+      name: 'Toby Nguyen', title: 'Fundraising', email: 'tan942@utexas.edu',
+      profileLink: '', discord: 'tguyen' },
     {
-      name: 'Toby Nguyen', title: 'Fundraising', email: ' ',
-      photo: '/images/.jpg', profileLink: '' },
-  ];
+      name: 'Grace Li', title: 'Corporate', email: 'gracewl@utexas.edu',
+      profileLink: '', discord: 'watchycat' },
+];
 
-  export const leaders: leaders[] = [
-    { name: "Jiwoo Park", email: "jiwoo email", photo: '/images/square.jpeg', profileLink: ''},
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-    { name: " ", email: " ", photo: '/images/.jpg', profileLink: ''},
-  ]
+export const leaders: leaders[] = [
+    { name: "Yilin Jin", profileLink: 'https://www.linkedin.com/in/yilin-jin-20b986248/' },
+    { name: "Jiwoo Park", profileLink: 'https://www.linkedin.com/in/jiwoooop/' },
+    { name: "Lakshay Gupta", profileLink: 'https://www.linkedin.com/in/lakshay-gupta-168620246/' },
+    { name: "Wenyu Zhu", profileLink: 'https://www.linkedin.com/in/wenyugzhu/' },
+    { name: "Will Reger", profileLink: 'https://www.linkedin.com/in/will-reger-6760831a1/' },
+    { name: "Arnav Surjan", profileLink: 'https://www.linkedin.com/in/arnav-surjan/' },
+    { name: "Caleb Chalmers", profileLink: 'https://www.linkedin.com/in/calebchalmers/' },
+    { name: "Dylan Zu", profileLink: 'https://www.linkedin.com/in/dylan-zu-7807231bb/' },
+    { name: "Olyvia Witham", profileLink: 'https://www.linkedin.com/in/olyvia-witham-74418628b/' },
+    { name: "Tanay Garg", profileLink: 'https://www.linkedin.com/in/tanay-garg/' },
+    { name: "Evan Lai", profileLink: 'https://www.linkedin.com/in/laievan/' },
+    { name: "Morris Lin", profileLink: 'https://www.linkedin.com/in/morris-lin-yuan/' },
+    { name: "Brianna Dickson", profileLink: '' },
+    { name: "Joseph Romero", profileLink: '' },
+    { name: "Arthur Zhang", profileLink: '' },
+    { name: "Theodore Hubbard", profileLink: '' },
+    { name: "Runtian Du", profileLink: '' },
+    { name: "Linh Tran", profileLink: '' },
+    { name: "Ashlynn Tusneem", profileLink: '' },
+    { name: "Devika Nambisan", profileLink: '' },
+    { name: "Sricharan Hari", profileLink: '' },
+    { name: "Tanya Nikam", profileLink: '' },
+    { name: "Marcela Cerrato", profileLink: '' },
+    { name: "Junhan (Johnny) Shen", profileLink: '' },
+    { name: "Barrett Lubianski", profileLink: '' },
+    { name: "Christopher Arellano", profileLink: '' },
+    { name: "Natalie Best", profileLink: '' },
+    { name: "Sicheng (Terry) Tan", profileLink: '' },
+    { name: "Rafael Torres", profileLink: '' },
+];

@@ -5,12 +5,6 @@ import Footer from '../components/footer';
 import Iframe from 'react-iframe';
 
 const JoinPage: React.FC = () => {
-  const handleClick = (link: string) => {
-    if (link) {
-      window.open(link, '_blank');
-    }
-  };
-
   return (
     <div className="flex flex-col min-h-screen">
       <header className="mb-8">
@@ -29,35 +23,29 @@ const JoinPage: React.FC = () => {
           <br />
           New members are required to fill a{' '}
           <a
-            onClick={() =>
-              handleClick(
-                'https://docs.google.com/forms/d/e/1FAIpQLSf5v1L3MB3naSaYESixKXnwWSFYm6uatYRvCiesrBWiLwvQuQ/viewform'
-              )
-            }
-            className="text-[#BF5700] underline hover:text-[#cc7933] hover:cursor-pointer"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf5v1L3MB3naSaYESixKXnwWSFYm6uatYRvCiesrBWiLwvQuQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#BF5700] underline hover:text-[#cc7933]"
           >
             Membership Form
           </a>{' '}
           and{' '}
           <a
-            onClick={() =>
-              handleClick(
-                'https://docs.google.com/forms/d/e/1FAIpQLSdRvNc2R3vnG0AXu4k7bypacyeB2jgF_D1nDPq76kE8WIIBmQ/viewform'
-              )
-            }
-            className="text-[#BF5700] underline hover:text-[#cc7933] hover:cursor-pointer"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdRvNc2R3vnG0AXu4k7bypacyeB2jgF_D1nDPq76kE8WIIBmQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#BF5700] underline hover:text-[#cc7933]"
           >
             Safety Waiver
           </a>.
           <br />
           Pay membership dues{' '}
           <a
-            onClick={() =>
-              handleClick(
-                'https://utdirect.utexas.edu/nlogon/txshop/item_details.WBX?application_name=ENENGALU&component=0&dept_prefix=E2&item_id=199&cat_seq_chosen=02&subcategory_seq_chosen=000'
-              )
-            }
-            className="text-[#BF5700] underline hover:text-[#cc7933] hover:cursor-pointer"
+            href="https://utdirect.utexas.edu/nlogon/txshop/item_details.WBX?application_name=ENENGALU&component=0&dept_prefix=E2&item_id=199&cat_seq_chosen=02&subcategory_seq_chosen=000"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#BF5700] underline hover:text-[#cc7933]"
           >
             here!
           </a>
@@ -65,83 +53,73 @@ const JoinPage: React.FC = () => {
 
         <div className="flex flex-col md:flex-row items-start mt-10 gap-8">
           <div className="flex flex-col space-y-4 md:w-1/2">
-            <div
-              onClick={() =>
-                handleClick('https://www.instagram.com/ut_ieee_ras/')
-              }
-              className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
+            <a
+              href="https://www.instagram.com/ut_ieee_ras/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933]"
             >
               Instagram
-            </div>
-            <div
-              onClick={() =>
-                handleClick(
-                  'https://discord.gg/ehmhUTZ2NZ'
-                )
-              }
-              className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
+            </a>
+            <a
+              href="https://discord.gg/ehmhUTZ2NZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933]"
             >
               Main Discord
-            </div>
-            <div
-              onClick={() =>
-                handleClick('https://www.youtube.com/@ut_ieee_ras')
-              }
-              className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
+            </a>
+            <a
+              href="https://www.youtube.com/@ut_ieee_ras"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933]"
             >
               Youtube
-            </div>
-            <div
-              onClick={() =>
-                handleClick('https://github.com/ut-ras')
-              }
-              className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
+            </a>
+            <a
+              href="https://github.com/ut-ras"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#BF5700] text-[clamp(1.5rem,4vw,2rem)] font-bold underline hover:text-[#cc7933]"
             >
               Github
-            </div>
+            </a>
             <div className="text-black text-[clamp(1.5rem,4vw,2rem)] mt-6">
               Committee Specific Discords
             </div>
-            <div
-              onClick={() =>
-                handleClick(
-                  'https://discord.gg/Tcs987kkTp'
-                )
-              }
-              className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
+            <a
+              href="https://discord.gg/Tcs987kkTp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933]"
             >
               IGVC
-            </div>
-            <div
-              onClick={() =>
-                handleClick(
-                  'https://discord.gg/fU7qEDc322'
-                )
-              }
-              className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
+            </a>
+            <a
+              href="https://discord.gg/fU7qEDc322"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933]"
             >
               Demobots
-            </div>
-            <div
-              onClick={() =>
-                handleClick(
-                  'https://discord.gg/dXjmUvAm4q'
-                )
-              }
-              className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
+            </a>
+            <a
+              href="https://discord.gg/dXjmUvAm4q"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933]"
             >
               Robomaster
-            </div>
-            <div
-              onClick={() =>
-                handleClick(
-                  'https://discord.gg/DvPsTE94qe'
-                )
-              }
-              className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933] hover:cursor-pointer"
+            </a>
+            <a
+              href="https://discord.gg/DvPsTE94qe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#BF5700] text-[clamp(1rem,3vw,1.5rem)] font-bold underline hover:text-[#cc7933]"
             >
               VexU
-            </div>
+            </a>
           </div>
 
           <div className="flex-1">

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/ras_logo_big.png", //Get ico working, idk why its not :(
+        url: "/images/ras_logo_dark.png", //Get ico working, idk why its not :(
       },
     ],
   },

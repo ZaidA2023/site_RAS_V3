@@ -1,65 +1,36 @@
 'use client'
 
-import {vexSlides, dbSlides, rbmSlides, igvcSlides, thonSlides, advSlides} from "./slidesData";
+import { committeesSlides } from "./slidesData";
 import Slideshow from "./Slideshow";
 
 export default function Committees() {
-return (
-<div>
-  {/* VexU title and slides */}
-  <div className = "text-black flex">
-  <div className = "slider-container text-start text-4xl">
-    VEXU
-  </div>
-  </div>
-  <div className = "wrapper w-full bg-transparent relative mt-5">
-  <Slideshow slides = {vexSlides}/>
-  </div>
-  {/* Demobots title and slides */}
-  <div className = "mt-10 text-black flex">
-  <div className = "slider-container text-start ml-20 text-4xl">
-    Demobots
-  </div>
-  </div>
-  <div className = "wrapper w-full bg-transparent relative mt-5">
-  <Slideshow slides = {dbSlides}/>
-  </div>
-  {/* Robomaster title and slides */}
-  <div className = "mt-10 text-black flex">
-  <div className = "slider-container text-start ml-20 text-4xl">
-    Robomaster
-  </div>
-  </div>
-  <div className = "wrapper w-full bg-transparent relative mt-5">
-  <Slideshow slides = {rbmSlides}/>
-  </div>
-  {/* IGVC title and slides */}
-  <div className = "mt-10 text-black flex">
-  <div className = "slider-container text-start ml-20 text-4xl">
-    IGVC
-  </div>
-  </div>
-  <div className = "wrapper w-full bg-transparent relative mt-5">
-  <Slideshow slides = {igvcSlides}/>
-  </div>
-  {/* Robotathon title and slides */}
-  <div className = "mt-10 text-black flex">
-  <div className = "slider-container text-start ml-20 text-4xl">
-    Robotathon
-  </div>
-  </div>
-  <div className = "wrapper w-full bg-transparent relative mt-5">
-  <Slideshow slides = {thonSlides}/>
-  </div>
-  {/* Business title and slides */}
-  <div className = "mt-10 text-black flex">
-  <div className = "slider-container text-start ml-20 text-4xl">
-    Business / Advertising
-  </div>
-  </div>
-  <div className = "wrapper w-full bg-transparent relative mt-5">        
-  <Slideshow slides = {advSlides}/>
-  </div>
-</div>
-)
+  return (
+    <div>
+      {committeesSlides.map((committee, idx) => (
+        committee.slides.length && (
+          <div key={idx}>
+            {/* Header with title and Discord button (if available) */}
+            <div className="mt-10 text-black flex flex-wrap items-center last:justify-center justify-between px-4 sm:px-20 gap-4">
+              <div className="slider-container text-4xl">
+                {committee.title}
+              </div>
+              {committee.linkLink && committee.linkTitle && (
+                <a
+                  href={committee.linkLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button"
+                >
+                  {committee.linkTitle}
+                </a>
+              )}
+            </div>
+            <div className="wrapper w-full bg-transparent relative mt-5">
+              <Slideshow slides={committee.slides} />
+            </div>
+          </div>
+        )
+      ))}
+    </div>
+  )
 }

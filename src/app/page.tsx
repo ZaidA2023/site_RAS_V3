@@ -60,11 +60,14 @@ export default function Home() {
       </div>
 
       {/* Post-home, about */}
-      <div id="parent" className="px-4 py-8">
-        <div id="narrow" className="text-4xl md:text-7xl text-center text-black mt-8">
+      <div id="parent" className="px-4 py-8 flex flex-col md:flex-row">
+        <div id="narrow" className="ml-8 md:pr-8 text-4xl md:text-7xl text-center text-black mt-8 pr-0">
           What <br /> is <br /> RAS?
         </div>
-        <div id="wide" className="mt-6 text-xl md:text-3xl text-center text-black leading-relaxed">
+        <div
+          id="wide"
+          className="mt-6 md:pl-8 text-xl md:text-3xl text-center text-black leading-relaxed min-w-[20ch] max-w-full"
+        >
           We are a student organization open to students from any background and major.<br />
           Since 1997, we&apos;ve helped students gain practical multi-disciplinary experience<br />
           in the lab, then demonstrated our abilities at various robotics competitions while<br />

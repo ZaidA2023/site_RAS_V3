@@ -6,6 +6,7 @@ import Link from 'next/link'
 interface NavSection {
   id: string;
   label: string;
+  link?: string;
 }
 
 interface NavbarProps {
@@ -14,16 +15,17 @@ interface NavbarProps {
   inverse?: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ 
-  scrollSet = true, 
-  opacitySet = true, 
-  inverse = false 
+const Navbar: React.FC<NavbarProps> = ({
+  scrollSet = true,
+  opacitySet = true,
+  inverse = false
 }) => {
   const sections: NavSection[] = useMemo(() => [
     { id: 'join', label: 'Join' },
     { id: 'support', label: 'Supporters' },
     { id: 'blog', label: 'Blog' },
     { id: 'leaders', label: 'Leadership' },
+    { id: 'donate', label: 'Donate', link: 'https://hcb.hackclub.com/donations/start/austin-ieee-ras' },
   ], []);
 
   const [opacity, setOpacity] = useState<number>(scrollSet ? 0 : 1);
@@ -59,8 +61,8 @@ const Navbar: React.FC<NavbarProps> = ({
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (isMenuOpen && buttonRef.current && menuRef.current &&
-          !buttonRef.current.contains(event.target as Node) &&
-          !menuRef.current.contains(event.target as Node)) {
+        !buttonRef.current.contains(event.target as Node) &&
+        !menuRef.current.contains(event.target as Node)) {
         setIsMenuOpen(false);
       }
     };
@@ -70,13 +72,12 @@ const Navbar: React.FC<NavbarProps> = ({
   }, [isMenuOpen]);
 
   const logoSrc = scrolled && !inverse
-    ? "/images/ras_logo_dark.png" 
+    ? "/images/ras_logo_dark.png"
     : "/images/ras_logo.png";
 
   return (
-    <nav className={`fixed top-0 z-50 pointer-events-none [&>*:not(.clickable)]:pointer-events-none w-full ${
-      isMenuOpen ? 'pointer-events-auto' : ''
-    }`}>
+    <nav className={`fixed top-0 z-50 pointer-events-none [&>*:not(.clickable)]:pointer-events-none w-full ${isMenuOpen ? 'pointer-events-auto' : ''
+      }`}>
       <div className="absolute inset-0 h-20 transition-opacity duration-1000 bg-white opacity-0 aria-hidden='true'"></div>
 
       {isMenuOpen && (
@@ -87,11 +88,11 @@ const Navbar: React.FC<NavbarProps> = ({
       )}
 
       <div className="relative flex items-center justify-between h-20 w-screen">
-        <Link 
-          href="/#home" 
+        <Link
+          href="/#home"
           className="clickable pointer-events-auto"
         >
-          <img 
+          <img
             src={logoSrc}
             alt="RAS Logo"
             className="md:pl-8 md:pr-0 pr-12"
@@ -104,16 +105,16 @@ const Navbar: React.FC<NavbarProps> = ({
           {sections.map((section) => (
             <Link
               key={section.id}
-              href={`/${section.id}`}
+              href={section.link ?? '/' + section.id}
               className={`
                 px-4 py-2 rounded-full font-bold transition duration-300 hover:cursor-pointer
                 pointer-events-auto border-transparent hover:bg-[#BF5700] hover:text-white 
                 ${scrolled ? 'clickable' : ""}
-                ${scrolled && !inverse ? 'text-black' : 'text-white'}
+                ${scrolled && !inverse ? 'text-black bg-white' : 'text-white bg-black'}
               `}
-              style={{ 
-                opacity, 
-                visibility: scrolled || !inverse ? 'visible' : 'hidden' 
+              style={{
+                opacity,
+                visibility: scrolled || !inverse ? 'visible' : 'hidden'
               }}
             >
               {section.label}
@@ -142,15 +143,14 @@ const Navbar: React.FC<NavbarProps> = ({
 
         <div
           ref={menuRef}
-          className={`md:hidden fixed top-20 left-0 w-full z-50 transition-all duration-300 pointer-events-auto ${
-            isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-          } ${scrolled ? 'bg-white' : 'bg-opacity-90 backdrop-blur-sm'}`}
+          className={`md:hidden fixed top-20 left-0 w-full z-50 transition-all duration-300 pointer-events-auto ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+            } ${scrolled ? 'bg-white' : 'bg-opacity-90 backdrop-blur-sm'}`}
         >
           <div className="flex flex-col items-center py-4">
             {sections.map((section) => (
               <Link
                 key={section.id}
-                href={`/${section.id}`}
+                href={section.link ?? '/' + section.id}
                 className={`w-full text-center px-4 py-3 font-bold transition-colors duration-300
                   ${scrolled && !inverse ? 'text-black' : 'text-white'}
                   hover:bg-[#BF5700] hover:text-white pointer-events-auto`}
