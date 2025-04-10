@@ -52,8 +52,8 @@ export default function Home() {
         </p>
         <p className="text-3xl md:text-4xl flex left-15 md:left-35 top-120 absolute">
           Teaching practical robotics skills to<br/> 
-          all as the largest engineering group<br/>
-          at UT with over 200 students across <br/>
+          all as one of the largest robotics orgs<br/>
+          at UT with over 100 students across <br/>
           7 majors 
         </p>
         <p
