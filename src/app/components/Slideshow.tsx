@@ -26,7 +26,7 @@ const Slideshow = ({ slides }) => {
         >
           {slides.map((slide, idx) => (
             <SplideSlide key={idx}>
-              <div className="relative">
+              <div className="relative hover:bg-orange-200/20">
                   <Image
                     src={slide.img}
                     alt={`Slide ${slide.id}`}
@@ -36,7 +36,7 @@ const Slideshow = ({ slides }) => {
                     onClick={() => handleImageClick(slide.link)}
                   />
                 {slide.caption && (
-                  <div className="text-left text-black font-bold text-2xl pl-2 mt-2">
+                  <div className="text-left text-black font-bold text-2xl pl-2 mt-2 hover:underline">
                     {slide.caption}
                   </div>
                 )}
