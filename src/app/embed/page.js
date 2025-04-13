@@ -3,7 +3,7 @@ import React, { Suspense } from "react";
 import Navbar from "../components/Navbar";
 import dynamic from "next/dynamic";
 
-const EmbedContent = dynamic(() => import("./EmbedContent"), {
+const EmbedContent = dynamic(() => import("../components/embedComp.js"), {
   suspense: true,
 });
 
