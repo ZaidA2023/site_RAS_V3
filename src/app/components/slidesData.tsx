@@ -17,7 +17,7 @@ export const committeesSlides = [
         linkTitle: "Discord",
         slides: [
             { img: '/images/slides/demobots-couch.jpg', caption: "Couchbot", link: "https://ut-ieee-ras.notion.site/ebd/1cdebc1c571480b69e6eebbb33a5dadb" },
-            { img: '/images/slides/demobots-chessbot.png', caption: "Chessbot", link: "https://ut-ieee-ras.notion.site/ebd/13debc1c571480788bbef41a724667d9" },
+            { img: '/images/slides/demobots-chessbot.png', caption: "Chessbot", link: "https://ut-ieee-ras.notion.site/ebd/13cebc1c5714802a9131cc6743a0a56b?v=13cebc1c571480a2ae30000c7825d283" },
             { img: '/images/slides/demobots-polargraph.gif', caption: "Polargraph", link: "https://github.com/ut-ras/Demobots-Polargraph" },   //Need to do this one
              { img: '/images/slides/demobots-dancebot.gif', caption: "Dancebot", link: "https://ut-ieee-ras.notion.site/ebd/1cdebc1c5714808dac5fec901bd0da4a" },
             // { img: '', caption: "MirrorBot", link: "" },

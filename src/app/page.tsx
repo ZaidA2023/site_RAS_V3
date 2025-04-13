@@ -2,7 +2,7 @@
 
 import Navbar from "./components/Navbar";
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image'; // Added import for next/image
+import Image from 'next/image';
 import Awards from './components/awardsData';
 import Committees from "./components/committees";
 import Footer from "./components/footer";
@@ -26,7 +26,7 @@ export default function Home() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // run initially in case its a reload and we're already scrolled
+    handleScroll(); 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
