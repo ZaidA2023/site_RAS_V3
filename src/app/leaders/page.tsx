@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import { leaders, officers, teamleads } from '../components/officersData';
 import Footer from '../components/footer';
 
+
 const LeaderPage: React.FC = () => {
   const handleClick = (link) => {
     if (link) {

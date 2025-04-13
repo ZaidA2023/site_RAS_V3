@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import cadence from '../../../public/images/sponsors/Cadence-Logo.png'
 
 
 //Place sponsors here
@@ -10,7 +11,7 @@ export const sponsors = {
     
   ],
   gold: [
-    { image: '/images/sponsors/Cadence_Logo.png', name: 'Cadence' },
+    { image: cadence, name: 'Cadence' },
   ],
   silver: [
     
