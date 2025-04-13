@@ -10,7 +10,7 @@ export const sponsors = {
     
   ],
   gold: [
-    { image: '/images/sponsors/texas_inst.png', name: 'Texas Instruments' },
+    { image: '/images/sponsors/Cadence_Logo.png', name: 'Cadence' },
   ],
   silver: [
     
@@ -49,17 +49,17 @@ export default function SponsorDisplay() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
               {sponsorsInTier.map((sponsor, index) => (
-                <div key={index} className="flex justify-between inline-flex items-center p-4 bg-[#e6e4d8] rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <div key={index} className="flex flex-col items-center p-4 bg-[#e6e4d8] rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                   <div className="relative w-32 h-32 mb-4">
                     <Image
                       src={sponsor.image}
                       alt={sponsor.name}
                       fill
-                      className="object-contain items-center"
+                      className="object-contain"
                       sizes="100px, 100px"
                     />
                   </div>
-                  <p className="text-center text-3xl text-black mr-[100px]">{sponsor.name}</p>
+                  <p className="text-center text-3xl text-black">{sponsor.name}</p>
                 </div>
               ))}
             </div>

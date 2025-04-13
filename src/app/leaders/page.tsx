@@ -7,6 +7,11 @@ import { leaders, officers, teamleads } from '../components/officersData';
 import Footer from '../components/footer';
 
 const LeaderPage: React.FC = () => {
+  const handleClick = (link) => {
+    if (link) {
+      window.open(link, '_blank');
+    }
+  };
   return (
     <>
       <Navbar scrollSet={false} />
@@ -20,16 +25,12 @@ const LeaderPage: React.FC = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 md:gap-12">
           {officers.map((member, index) => (
             <div
-              key={index}
-              className="bg-[#e6e4d8] shadow rounded-lg p-3 sm:p-6 text-center flex flex-col items-center"
+              onClick={() => handleClick(member.profileLink)} 
+              key = {index}
+              className={`bg-[#e6e4d8] shadow rounded-lg p-3 sm:p-6 text-center flex flex-col items-center
+                        hover:cursor-pointer  ${member.profileLink.length < 5 ? "pointer-events-none" : ""}`}
             >
               <div className="w-full aspect-square relative mb-4">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={member.profileLink}
-                  className={member.profileLink.length < 5 ? "pointer-events-none" : ""}
-                >
                   <Image
                     src={member.picture ? member.picture : "/images/ras_logo_big.png"}
                     alt={member.name}
@@ -37,7 +38,6 @@ const LeaderPage: React.FC = () => {
                     placeholder='blur'
                     fill
                   />
-                </a>
               </div>
               <h3 className="font-semibold text-[clamp(1rem,2.5vw,1.5rem)] text-black">
                 {member.name}
@@ -45,6 +45,7 @@ const LeaderPage: React.FC = () => {
               <p className="text-[clamp(0.8rem,2vw,1.2rem)] text-black">
                 {member.title}
               </p>
+              
               <p className="text-[clamp(0.7rem,1.8vw,1rem)] text-[#BF5700]">
                 <a href={`mailto:${member.email}`}>{member.email}</a>
               </p>
@@ -59,23 +60,18 @@ const LeaderPage: React.FC = () => {
           {teamleads.map((member, index) => (
             <div
               key={index}
-              className="bg-[#e6e4d8] shadow rounded-lg p-3 sm:p-6 text-center flex flex-col items-center"
+              className={`bg-[#e6e4d8] shadow rounded-lg p-3 sm:p-6 text-center flex flex-col items-center"
+                        ${member.profileLink.length < 5 ? "pointer-events-none" : ""} hover:cursor-pointer`}
+              onClick={() => handleClick(member.profileLink)} 
             >
               <div className="w-full aspect-square relative mb-4">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={member.profileLink}
-                  className={member.profileLink.length < 5 ? "pointer-events-none" : ""}
-                >
                   <Image
                     src={member.picture ? member.picture : "/images/ras_logo_big.png"}
                     alt={member.name}
-                    className="object-contain rounded-full"
+                    className="object-cover rounded-full"
                     placeholder='blur'
                     fill
                   />
-                </a>
               </div>
               <h3 className="font-semibold text-[clamp(1rem,2.5vw,1.5rem)] text-black">
                 {member.name}
@@ -97,24 +93,19 @@ const LeaderPage: React.FC = () => {
           {leaders.map((member, index) => (
             <div
               key={index}
-              className="bg-[#e6e4d8] shadow rounded-lg p-3 sm:p-6 flex items-center"
+              className={`bg-[#e6e4d8] shadow rounded-lg p-3 sm:p-6 flex items-center
+                        ${member.profileLink.length < 5 ? "pointer-events-none" : ""} hover:cursor-pointer`}
+              onClick={() => handleClick(member.profileLink)} 
             >
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={member.profileLink}
-                className={member.profileLink.length < 5 ? "pointer-events-none" : ""}
-              >
-                <div className="relative rounded-full w-16 h-16 sm:w-20 sm:h-20">
-                  <Image
-                    src={member.picture ? member.picture : "/images/ras_logo_big.png"}
-                    alt={member.name}
-                    className="object-contain rounded-full"
-                    placeholder='blur'
-                    fill
-                  />
-                </div>
-              </a>
+              <div className="relative rounded-full w-16 h-16 md:w-24 md:h-24">
+                <Image
+                  src={member.picture ? member.picture : "/images/ras_logo_big.png"}
+                  alt={member.name}
+                  className="object-cover rounded-full"
+                  placeholder='blur'
+                  fill
+                />
+              </div>
               <div className="ml-2 w-full">
                 <h3 className="text-center font-semibold text-[clamp(0.9rem,2vw,1.3rem)] text-black">
                   {member.name}

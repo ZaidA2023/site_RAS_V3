@@ -95,3 +95,11 @@ html {
 .button:hover {
   background-color: #e07a3f; /* Use a lighter orange for hover */
 }
+
+.splide__arrow {
+  transition: opacity .3s ease;
+}
+.splide__arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
