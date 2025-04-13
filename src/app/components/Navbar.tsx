@@ -103,16 +103,16 @@ const Navbar: React.FC<NavbarProps> = ({
           />
         </Link>
 
-        <div className="hidden md:flex w-full mx-auto justify-end gap-8 pr-8">
+        <div className="hidden md:flex w-full mx-auto justify-end gap-8 pr-6">
           {sections.map((section) => (
             <Link
               key={section.id}
               href={section.link ?? '/' + section.id}
               className={`
                 px-4 py-2 rounded-full font-bold transition duration-300 hover:cursor-pointer
-                pointer-events-auto border-transparent hover:bg-[#BF5700] hover:text-white 
+                pointer-events-auto border-black border-solid hover:bg-[#BF5700] hover:text-white 
                 ${scrolled ? 'clickable' : ""}
-                ${scrolled && !inverse ? 'text-black bg-white' : 'text-white bg-black'}
+                ${scrolled && !inverse ? 'text-black bg-white border-black border-1' : 'text-white bg-black border-white border-1'}
               `}
               style={{
                 opacity,
@@ -153,7 +153,7 @@ const Navbar: React.FC<NavbarProps> = ({
               <Link
                 key={section.id}
                 href={section.link ?? '/' + section.id}
-                className={`w-full text-center px-4 py-3 font-bold transition-colors duration-300
+                className={`w-full text-center px-4 py-3 border-black font-bold transition-colors duration-300
                   ${scrolled && !inverse ? 'text-black' : 'text-white'}
                   hover:bg-[#BF5700] hover:text-white pointer-events-auto`}
                 onClick={() => setIsMenuOpen(false)}
