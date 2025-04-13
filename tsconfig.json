@@ -39,7 +39,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "src/app/embed/page.js"  ],
+, "src/app/embed/page.js", "src/app/components/embedComp.js"  ],
   "exclude": [
     "node_modules"
   ]
