@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.3.1",
     "@notionhq/client": "^2.2.16",
     "@react-three/drei": "^10.0.4",
     "@react-three/fiber": "^9.0.4",

@@ -35,11 +35,14 @@
     }
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "src/app/embed/page.js", "src/app/components/embedComp.js"  ],
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "src/app/components/embedComp.js",
+    "src/app/embed/page.js",
+    "dist/types/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ]
